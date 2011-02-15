@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New Blog
+uuid: 8A838BE9-BD84-43D3-9D05-54CA9B292246
 ---
 
 I decided to throw out my old blog and build a new one that uses Github's

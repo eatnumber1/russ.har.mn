@@ -4,19 +4,18 @@ layout: article
 
 <div id="date">Posted {{ page.date | date_to_string }}</div>
 {{ content }}
+{% unless site.disqus_shortname == nil or site.disqus_shortname == empty %}
 <div id="disqus">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
-		// required: replace example with your forum shortname
-		var disqus_shortname = 'eatnumber1';
+		var disqus_shortname = '{{ site.disqus_shortname }}';
+		{% unless page.uuid == nil or page.uuid == empty %}
+		var disqus_identifier = '{{ page.uuid }}';
+		{% endunless %}
+		{% unless site.disqus_developer == nil or site.disqus_developer == empty %}
+		var disqus_developer = {{ site.disqus_developer }};
+		{% endunless %}
 
-		// The following are highly recommended additional parameters.
-		// Remove the slashes in front to use.
-		// var disqus_identifier = 'unique_dynamic_id_1234';
-		// var disqus_url = 'http://example.com/permalink-to-page.html';
-		var disqus_developer = 1;
-
-		/* * * DON'T EDIT BELOW THIS LINE * * */
 		(function() {
 			var dsq = document.createElement('script');
 			dsq.type = 'text/javascript'; dsq.async = true;
@@ -34,8 +33,9 @@ layout: article
 	<a href="http://disqus.com" class="dsq-brlink">
 		blog comments powered by
 		<span class="logo-disqus">Disqus</span>
-	</a>	
+	</a>
 </div>
+{% endunless %}
 
 {% comment %}
 vim: ft=html sw=4 ts=4 sts=4 tw=80
