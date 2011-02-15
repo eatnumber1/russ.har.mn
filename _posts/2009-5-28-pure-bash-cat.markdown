@@ -29,12 +29,12 @@ done
 Now, keep reading if you want a small lesson in advanced bash.  I'll go line by
 line to explain what this is doing.
 
-{% highlight bash linenos %}
+{% highlight bash %}
 #!/bin/bash
 {% endhighlight %}
 Line 1 is the [shebang](http://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 
-{% highlight bash linenos %}
+{% highlight bash %}
 INPUTS=( "${@:-"-"}" )
 {% endhighlight %}
 Line 2 assigns the array variable INPUTS either the arguments provided on the
@@ -51,7 +51,7 @@ that is all enclosed in `()`. That makes an array out of the _positional
 parameters_ (the first argument to the program becomes the first element in the
 array, the second argument becomes the second element, etc.).
 
-{% highlight bash linenos %}
+{% highlight bash %}
 for i in "${INPUTS[@]}"; do
 {% endhighlight %}
 Line 3 begins a `for` loop which will assign to `i` each value stored in the
