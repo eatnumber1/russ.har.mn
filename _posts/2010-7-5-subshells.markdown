@@ -58,6 +58,9 @@ user 0m3.121s
 sys 0m0.359s
 {% endhighlight %}
 
+As you can see, when using `variable`, execution takes 0.367 seconds. `subshell`
+however takes a full 11.937 seconds!
+
 {% comment %}
 vim: ft=mkd sw=4 ts=4 sts=4 tw=80
 {% endcomment %}
