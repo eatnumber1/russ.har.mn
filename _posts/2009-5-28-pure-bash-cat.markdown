@@ -2,6 +2,7 @@
 layout: post
 title: Pure Bash Cat
 ---
+
 So just to see if I could, I wrote a version of cat using pure bash. Pure bash
 is a bash script which uses nothing but bash builtins to accomplish it's goal.
 To determine if a particular command is a builtin, you can use the command type
@@ -10,26 +11,32 @@ which are builtins include echo, read, exec, return. Some notable commands which
 are not builtins include cat and grep. As follows is my implementation of cat in
 pure bash.
 
-	#!/bin/bash
-	INPUTS=( "${@:-"-"}" )
-	for i in "${INPUTS[@]}"; do
-		if [[ "$i" != "-" ]]; then
-			exec 3< "$i" || exit 1
-		else
-			exec 3<&0
-		fi
-		while read -ru 3; do
-			echo -E "$REPLY"
-		done
+{% highlight bash linenos %}
+#!/bin/bash
+INPUTS=( "${@:-"-"}" )
+for i in "${INPUTS[@]}"; do
+	if [[ "$i" != "-" ]]; then
+		exec 3< "$i" || exit 1
+	else
+		exec 3<&0
+	fi
+	while read -ru 3; do
+		echo -E "$REPLY"
 	done
+done
+{% endhighlight %}
 
 Now, keep reading if you want a small lesson in advanced bash.  I'll go line by
 line to explain what this is doing.
 
-	#!/bin/bash
+{% highlight bash linenos %}
+#!/bin/bash
+{% endhighlight %}
 Line 1 is the [shebang](http://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 
-	INPUTS=( "${@:-"-"}" )
+{% highlight bash linenos %}
+INPUTS=( "${@:-"-"}" )
+{% endhighlight %}
 Line 2 assigns the array variable INPUTS either the arguments provided on the
 command line if they exist, or the single character `-`. The way this happens is
 as follows: `$@` is the variable to reference the _positional parameters_ (the
@@ -44,12 +51,15 @@ that is all enclosed in `()`. That makes an array out of the _positional
 parameters_ (the first argument to the program becomes the first element in the
 array, the second argument becomes the second element, etc.).
 
-	for i in "${INPUTS[@]}"; do
+{% highlight bash linenos %}
+for i in "${INPUTS[@]}"; do
+{% endhighlight %}
 Line 3 begins a `for` loop which will assign to `i` each value stored in the
 array `INPUTS` which was discussed earlier. The `@` index used is the same for
 arrays as `$@` is for the _positional parameters_.
 
 Maybe i'll explain more when i'm less lazy.
+
 {% comment %}
 vim: ft=mkd sw=4 ts=4 sts=4 tw=80
 {% endcomment %}
