@@ -6,7 +6,7 @@ uuid: F7F75BBC-BD14-4E53-9FF1-B7944F31108C
 
 So, thanks to [blocks](http://thirdcog.eu/pwcblocks/), Apple's new extension to
 C, you can now do basic object-orientation. Have a look over at
-[github](http://gist.github.com/605457) for a short example on how to do it.
+[GitHub](http://gist.github.com/605457) for a short example on how to do it.
 
 To break it down, an object is a struct, which contains both fields and
 [blocks](http://thirdcog.eu/pwcblocks/) which act as the object's methods.

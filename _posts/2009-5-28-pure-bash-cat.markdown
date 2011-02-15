@@ -59,7 +59,7 @@ Line 3 begins a `for` loop which will assign to `i` each value stored in the
 array `INPUTS` which was discussed earlier. The `@` index used is the same for
 arrays as `$@` is for the _positional parameters_.
 
-Maybe i'll explain more when i'm less lazy.
+Maybe I'll explain more when I'm less lazy.
 
 {% comment %}
 vim: ft=mkd sw=4 ts=4 sts=4 tw=80
