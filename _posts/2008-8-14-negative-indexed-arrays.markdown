@@ -10,7 +10,7 @@ negative indexed arrays. Now that I am a bit wiser in the ways of C++ and memory
 management, I actually know how to do it!
 
 The following small C++ program illustrates:
-{% highlight c %}
+{% highlight cpp %}
 #include <iostream>
 using namespace std;
 int main() {
@@ -28,19 +28,20 @@ Hello
 {% endhighlight %}
 The reason this happens is that since arrays in C and C++ are linear in memory,
 you can do math on them (the `++array` and `--array`).
+
 So if the array looks like this:
 
-	0xFADC  0xFADD  <-- This is the address
+	 0xFADC  0xFADD  <-- This is the address
 	-----------------
 	| Hello | World |
 	-----------------
 
 If you printed your array (without an index), you would see `0xFADC`; the
 address of the first element.  Therefore if you add one to that, your array's
-element 0 would point at memory address `0xFADD`, and it's element `-1` would
+element `0` would point at memory address `0xFADD`, and it's element `-1` would
 point at memory address `0xFADC`.
 
-__Remember__: Don't try to `delete` an array like this before restoring it to
+_Remember_, don't try to `delete` an array like this before restoring it to
 the way it originally was or you will get a segfault.
 
 A shorter way of doing it that doesn't involve using `new` is:
