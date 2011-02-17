@@ -9,7 +9,7 @@ layout: article
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 		var disqus_shortname = '{{ site.disqus_shortname }}';
-		{% unless page.uuid == nil or page.uuid == empty %}
+		{% unless page.id == nil or page.id == empty %}
 		var disqus_identifier = '{{ page.id }}';
 		{% endunless %}
 		{% unless site.disqus_developer == nil or site.disqus_developer == empty %}
