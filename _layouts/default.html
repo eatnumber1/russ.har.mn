@@ -13,8 +13,8 @@
 	<link rel="stylesheet" href="/css/960.css" type="text/css"/>
 	<link rel="stylesheet" href="/css/syntax.css" type="text/css"/>
 
-	{% if post.categories %}
-	<meta name="keywords" content="{{ post.keywords }}"/>
+	{% if page.categories %}
+	<meta name="keywords" content="{{ page.categories | join:',' }}"/>
 	{% endif %}
 
 	<meta name="description" content="The personal website and blog of Russell Harmon"/>
