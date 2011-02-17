@@ -4,16 +4,16 @@ layout: article
 
 <div id="date">Posted {{ page.date | date_to_string }}</div>
 {{ content }}
-{% unless site.disqus_shortname == null or site.disqus_shortname == empty %}
+{% unless site.disqus_shortname == null %}
 <!-- Disqus comment engine -->
 <div id="disqus">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 		var disqus_shortname = '{{ site.disqus_shortname }}';
-		{% unless page.id == null or page.id == empty %}
+		{% unless page.id == null %}
 		var disqus_identifier = '{{ page.id }}';
 		{% endunless %}
-		{% unless site.disqus_developer == null or site.disqus_developer == empty %}
+		{% unless site.disqus_developer == null %}
 		var disqus_developer = {{ site.disqus_developer }};
 		{% endunless %}
 
