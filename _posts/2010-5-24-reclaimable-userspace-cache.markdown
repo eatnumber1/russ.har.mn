@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reclaimable Userspace Cache Memory
-uuid: 7730C4BE-8A86-4CC4-B0F3-5809982DA44F
+categories: [programming]
 ---
 
 Caches are used all over your computer and for a huge variety of purposes. From

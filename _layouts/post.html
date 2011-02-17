@@ -10,7 +10,7 @@ layout: article
 	<script type="text/javascript">
 		var disqus_shortname = '{{ site.disqus_shortname }}';
 		{% unless page.uuid == nil or page.uuid == empty %}
-		var disqus_identifier = '{{ page.uuid }}';
+		var disqus_identifier = '{{ post.id }}';
 		{% endunless %}
 		{% unless site.disqus_developer == nil or site.disqus_developer == empty %}
 		var disqus_developer = {{ site.disqus_developer }};

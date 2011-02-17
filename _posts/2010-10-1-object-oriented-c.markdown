@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Object Oriented C
-uuid: F7F75BBC-BD14-4E53-9FF1-B7944F31108C
+categories: [programming, c]
 ---
 
 So, thanks to [blocks](http://thirdcog.eu/pwcblocks/), Apple's new extension to

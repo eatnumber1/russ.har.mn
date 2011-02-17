@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Negative Indexed Arrays
-uuid: 0CC46073-9E87-4B2D-812C-2608D5B6962A
+categories: [programming, c++]
 ---
 
 In first describing how ridiculous C and C++ was to my class when I was in my

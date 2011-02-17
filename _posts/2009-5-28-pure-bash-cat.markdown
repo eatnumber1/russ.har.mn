@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pure Bash Cat
-uuid: 1A463143-F454-4E65-BD70-97B03C50D3C0
+categories: [programming, bash]
 ---
 
 So just to see if I could, I wrote a version of cat using pure bash. Pure bash

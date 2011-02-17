@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bash Scripters: Stop using subshells to call functions."
-uuid: D2A33862-4FA9-43FC-9E56-F850311094BA
+categories: [programming, bash]
 ---
 
 When writing in bash, zsh, sh, etc... __stop__ using subshells to call functions.

@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Russell Harmon</title>
- <link href="http://eatnumber1.com/atom.xml" rel="self"/>
- <link href="http://eatnumber1.com/"/>
+ <link href="http://{{ site.domain }}/atom.xml" rel="self"/>
+ <link href="http://{{ site.domain }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://eatnumber1.com/</id>
+ <id>http://{{ site.domain }}/</id>
  <author>
    <name>Russell Harmon</name>
    <email>russ@eatnumber1.com</email>
@@ -17,9 +17,13 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://eatnumber1.com{{ post.url }}"/>
+   <link href="http://{{ site.domain }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://eatnumber1.com{{ post.id }}</id>
+   <!-- RFC 4151 compliant tag -->
+   <id>tag:{{ site.domain }},{{ post.date | date: "%Y-%m-%d" }}:{{ post.id | replace: "#", "/" }}</id>
+   {% for category in post.categories %}
+   <category scheme="http://{{ site.domain }}/tag" term="{{ category }}"/>
+   {% endfor %}
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

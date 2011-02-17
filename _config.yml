@@ -1,6 +1,8 @@
 auto: true
 pygments: true
+permalink: /blog/:year-:month-:day/:title
 
 ga_id: UA-10349264-2
 disqus_shortname: eatnumber1
 #disqus_developer: 1
+domain: eatnumber1.com
