@@ -4,5 +4,6 @@ permalink: /blog/:year-:month-:day/:title
 
 ga_id: UA-10349264-2
 disqus_shortname: eatnumber1
-#disqus_developer: 1
 domain: eatnumber1.com
+disqus_developer: 1
+librarything_id: w89d4d3040cc3fca1b55f985f31f340aa
