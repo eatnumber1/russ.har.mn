@@ -1,7 +1,8 @@
 ---
-layout: default
-title: Machinae Elegantiam
+layout: machinae
+title: Home
 section: Home
+feed: atom.xml
 ---
 
 +-- {.section}
