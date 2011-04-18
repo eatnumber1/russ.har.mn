@@ -27,6 +27,11 @@ You can chat with me via _xmpp_ and Google's chatback widget.
 =--
 
 +-- {.section}
+# Latitude
+I'm currently located in <span id="{{ site.latitude_id }}">(loading)</span>
+=--
+
++-- {.section}
 # [Twitter](http://twitter.com/eatnumber1)
 Contacting Twitter...
 {: #twitter_update_list }

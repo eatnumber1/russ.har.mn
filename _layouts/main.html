@@ -48,6 +48,12 @@ $(".LT_Preload").remove();
 $(".LT_Preload").html("Contacting LibraryThing...");
 </script>
 
+<!-- Google Latitude Location -->
+<script type="text/javascript" charset="UTF-8" src="/js/latitude.js"></script>
+<script type="text/javascript">
+doLatitude("{{ site.latitude_id }}", $("#{{ site.latitude_id }}"));
+</script>
+
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4
 {% endcomment %}
