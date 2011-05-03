@@ -11,7 +11,7 @@ layout: nil
  <id>http://{{ site.domain }}/</id>
  <author>
    <name>Russell Harmon</name>
-   <email>russ@eatnumber1.com</email>
+   <email>russ@russell.harmon.name</email>
  </author>
 
  {% for post in site.posts %}
