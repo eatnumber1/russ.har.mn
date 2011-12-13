@@ -4,7 +4,7 @@ title: Home
 section: Home
 ---
 
-<img class='inset right' src='/images/russ_harmon.jpg' title='Russ Harmon' alt='Photo of Russ Harmon' width='150px' />
+<img class='inset right' src='/images/russ_harmon.jpg' title='Russ Harmon' alt='Photo of Russ Harmon' width='150' />
 
 Welcome
 =======
@@ -27,7 +27,7 @@ The vast majority of my work can be found at my
 most recent projects I've worked on at GitHub.
 <div id="github_{{ site.github_username }}">
 	<span id="github_loading">(loading)</span>
-	<ul class="compact recent" id="github_list"/>
+	<ul class="compact recent" id="github_list"></ul>
 </div>
 =--
 
@@ -64,15 +64,15 @@ Contacting Twitter...
 {: #twitter_update_list }
 =--
 
+{% comment %}
 <!-- Do I really want this here? -->
-<!--
 +-- {.section}
 # [Reading](http://librarything.com/home/eatnumber1)
 Contacting LibraryThing...
 {: .LT_Preload }
 <div id="{{ site.librarything_id }}"> </div>
 =--
--->
+{% endcomment %}
 
 {% comment %}
 vim: ft=markdown sw=4 ts=4 sts=4 tw=80
