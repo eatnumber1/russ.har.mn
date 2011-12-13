@@ -13,7 +13,11 @@ function doLatitude( id, elem ) {
 			format: "json"
 		},
 		success: function( data ) {
-			elem.html(data.query.results.json.features.properties.reverseGeocode);
+			if( data.query.results.json.features == null ) {
+				elem.html("<span style=\"font-style:italic\">location unavailable</span>");
+			} else {
+				elem.html(data.query.results.json.features.properties.reverseGeocode);
+			}
 		},
 		// TODO: Error handling
 	});

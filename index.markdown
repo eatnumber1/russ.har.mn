@@ -1,8 +1,27 @@
 ---
-layout: main
+layout: top
 title: Home
 section: Home
 ---
+
+<img class='inset right' src='/images/russ_harmon.jpg' title='Russ Harmon' alt='Photo of Russ Harmon' width='150px' />
+
+Welcome
+=======
+
+I'm Russ Harmon, a mid-twenties American programmer. What you see below is some
+ramblings by me about myself or other things. Look if you want to.
+
++-- {.section}
+# Code
+The vast majority of my work can be found at my
+[GitHub](https://github.com/eatnumber1) page. What you can see below is the five
+most recent projects I've worked on at GitHub.
+<div id="github_{{ site.github_username }}">
+	<span id="github_loading">(loading)</span>
+	<ul class="compact recent" id="github_list"/>
+</div>
+=--
 
 +-- {.section}
 # Blog
@@ -45,5 +64,5 @@ Contacting LibraryThing...
 =--
 
 {% comment %}
-vim: ft=liquid sw=4 ts=4 sts=4 tw=80
+vim: ft=markdown sw=4 ts=4 sts=4 tw=80
 {% endcomment %}

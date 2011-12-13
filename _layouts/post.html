@@ -1,9 +1,8 @@
 ---
-layout: article
+layout: machinae
 ---
 
-<div id="date">Posted {{ page.date | date_to_string }}</div>
-{{ content }}
+<div id="page">{{ content }}</div>
 {% unless site.disqus_shortname == null %}
 <!-- Disqus comment engine -->
 <div id="disqus">

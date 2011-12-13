@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New Blog
+excerpt: TODO
 ---
 
 I decided to throw out my old blog and build a new one that uses Github's
