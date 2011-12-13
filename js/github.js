@@ -35,7 +35,6 @@ function github_latest( count, username, elem ) {
 			return 0;
 		});
 		data = data.slice(0, count);
-		console.log(data);
 
 		elem.find("#github_loading").remove();
 		var list = elem.find("#github_list");
