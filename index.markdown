@@ -4,7 +4,7 @@ title: Home
 section: Home
 ---
 
-<img class='inset right' src='/images/russ_harmon.jpg' title='Russ Harmon' alt='Photo of Russ Harmon' width='150' />
+![Photo of Russ Harmon](/images/russ_harmon.jpg){: .inset .right width=150}
 
 Welcome
 =======
@@ -27,7 +27,7 @@ The vast majority of my work can be found at my
 most recent projects I've worked on at GitHub.
 <div id="github_{{ site.github_username }}">
 	<span id="github_loading">(loading)</span>
-	<ul class="compact recent" id="github_list"></ul>
+	<ul class="compact recent" id="github_list"/>
 </div>
 =--
 
