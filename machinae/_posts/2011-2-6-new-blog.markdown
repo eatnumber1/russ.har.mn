@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Blog
-excerpt: TODO
+excerpt: Throwing out my old blog, I've constructed a new and better one.
 ---
 
 I decided to throw out my old blog and build a new one that uses Github's

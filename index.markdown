@@ -13,6 +13,13 @@ I'm Russ Harmon, a mid-twenties American programmer. What you see below is some
 ramblings by me about myself or other things. Look if you want to.
 
 +-- {.section}
+# Academics
+The main focus of my work at the moment is the completion of my studies at the
+[Rochester Institute of Technology](http://www.rit.edu/) which I attend as a
+full-time student and hope to complete my studies at the end of February, 2012.
+=--
+
++-- {.section}
 # Code
 The vast majority of my work can be found at my
 [GitHub](https://github.com/eatnumber1) page. What you can see below is the five
