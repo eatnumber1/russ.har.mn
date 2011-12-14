@@ -65,15 +65,5 @@ Contacting Twitter...
 =--
 
 {% comment %}
-<!-- Do I really want this here? -->
-+-- {.section}
-# [Reading](http://librarything.com/home/eatnumber1)
-Contacting LibraryThing...
-{: .LT_Preload }
-<div id="{{ site.librarything_id }}"> </div>
-=--
-{% endcomment %}
-
-{% comment %}
 vim: ft=markdown sw=4 ts=4 sts=4 tw=80
 {% endcomment %}
