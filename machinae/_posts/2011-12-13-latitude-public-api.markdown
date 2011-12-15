@@ -14,9 +14,11 @@ The Latitude website provides a location widget that can be placed on your
 website to show your current location, but it uses an undocumented API. After a
 bit of effort reverse engineering the location widget, I eventually came up with
 the following URL:
-`http://www.google.com/latitude/apps/badge/api?user=4048757213362106746&type=json`.
-This is an undocumented API by Google, and notably cannot use JSONP. That means
-that I couldn't use that URL directly from within my static-page
+
+	http://www.google.com/latitude/apps/badge/api?user=4048757213362106746&type=json
+
+This is an undocumented API by Google, and notably cannot use JSONP. That
+means that I couldn't use that URL directly from within my static-page
 Jekyll-generated website thanks to the
 [same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy).
 
