@@ -20,12 +20,12 @@ programming, and anything else computer related he cares to post.
 		<a class="title" href="{{ post.url }}">{{ post.title }}</a>
 		<a class="comments" href="{{ post.url }}#disqus_thread">View Comments</a>
 	</p>
-	<p class="excerpt">{{ post.excerpt }}</p>
+	<span class="excerpt">{{ post.excerpt | markdownify }}</span>
 </div>
 {% endfor %}
 
 {% comment %}
-<!-- TODO: re-add when I have more than five posts -->
+<!-- TODO: re-add when I have more than ten posts -->
 <p>
 	<a href="past.html">Older Posts →</a>
 </p>
@@ -47,5 +47,5 @@ programming, and anything else computer related he cares to post.
 </script>
 
 {% comment %}
-vim: ft=liquid sw=4 ts=4 sts=4
+vim: ft=jekyll sw=4 ts=4 sts=4
 {% endcomment %}
