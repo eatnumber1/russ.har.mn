@@ -73,5 +73,5 @@ Contacting Twitter...
 =--
 
 {% comment %}
-vim: ft=markdown sw=4 ts=4 sts=4 tw=80
+vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
 {% endcomment %}
