@@ -9,7 +9,8 @@ section: Home
 Welcome
 =======
 
-I'm Russ Harmon, a mid-twenties American programmer. What you see below is some
+I'm Russ Harmon, a twenty three year old programmer currently located in
+<span id="{{ site.latitude_id }}" class="loading">(loading)</span>. What you see below is some
 ramblings by me about myself or other things. Look if you want to.
 
 +-- {: .section }
@@ -27,7 +28,7 @@ The vast majority of my work can be found at my
 most recent projects I've worked on at GitHub.
 +-- {: #github_{{ site.github_username }} }
 (loading)
-{: #github_loading }
+{: #github_loading .loading }
 <ul class="compact recent" id="github_list"/>
 =--
 =--
@@ -63,11 +64,6 @@ You can chat with me via _xmpp_ and Google's chatback widget.
 <br/>
 ![](http://www.google.com/talk/service/badge/Show?tk=z01q6amlq69k34bqdpiumkcmscad4d6g93v358un157gamspjobu1q8jikb4chn8fqjjsvq3mhc8ihhq60hgbu4iq7g1a7ffmvi0u9s8ch94d2qgpp2ssbepstoj19p3lu8eaaq4msnfksfrll6a6iqsaiddia4j40eatqt1r&amp;w=9&amp;h=9){: height="9" width="9" }
 [Chat with Russell Harmon](http://www.google.com/talk/service/badge/Start?tk=z01q6amlq69k34bqdpiumkcmscad4d6g93v358un157gamspjobu1q8jikb4chn8fqjjsvq3mhc8ihhq60hgbu4iq7g1a7ffmvi0u9s8ch94d2qgpp2ssbepstoj19p3lu8eaaq4msnfksfrll6a6iqsaiddia4j40eatqt1r){: target="_blank" title="Click here to chat with Russell Harmon" }
-=--
-
-+-- {: .section }
-# Latitude
-I'm currently located in <span id="{{ site.latitude_id }}">(loading)</span>
 =--
 
 +-- {: .section }
