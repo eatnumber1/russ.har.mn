@@ -1,16 +1,20 @@
----
-destination : /Users/mreid/Sites/mark.reid.name
-auto        : false
-lsi         : false
-pygments    : true
-permalink   : none
-markdown    : maruku
+auto: true
+pygments: true
+permalink: /blog/:year-:month-:day/:title
+markdown: maruku
+
+ga_id: UA-10349264-2
+disqus_shortname: eatnumber1
+domain: rus.har.mn
+#disqus_developer: 1
+librarything_id: w89d4d3040cc3fca1b55f985f31f340aa
+latitude_id: 4048757213362106746
+github_username: eatnumber1
+birthdate: August 9, 1988
 
 maruku:
     use_divs: true
     use_tex: true
-    png_engine : blahtex
-    png_dir    : images/latex/
-    png_url    : /images/latex/
-
-    
+    png_engine: blahtex
+    png_dir: images/latex/
+    png_url: /images/latex/
