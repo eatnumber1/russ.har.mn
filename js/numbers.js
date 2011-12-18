@@ -118,26 +118,3 @@ Number.prototype.toWords = function() {
 	var w = t.toWords();
 	return w;
 };
-
-/*
-function assertEq( b, exp ) {
-	if( b != exp ) throw '"' + b + '" != "' + exp + '"';
-};
-
-assertEq(new Number(0).toWords(), "zero");
-assertEq(new Number(1).toWords(), "one");
-assertEq(new Number(10).toWords(), "ten");
-assertEq(new Number(12).toWords(), "twelve");
-assertEq(new Number(20).toWords(), "twenty");
-assertEq(new Number(21).toWords(), "twenty one");
-assertEq(new Number(100).toWords(), "one hundred");
-assertEq(new Number(999).toWords(), "nine hundred and ninety nine");
-assertEq(new Number(505).toWords(), "five hundred and five");
-assertEq(new Number(111).toWords(), "one hundred and eleven");
-assertEq(new Number(106).toWords(), "one hundred and six");
-assertEq(new Number(521121).toWords(), "five hundred and twenty one thousand, one hundred and twenty one");
-assertEq(new Number(610521121).toWords(), "six hundred and ten million, five hundred and twenty one thousand, one hundred and twenty one");
-assertEq(new Number(7401234123145).toWords(), "seven trillion, four hundred and one billion, two hundred and thirty four million, one hundred and twenty three thousand, one hundred and fourty five");
-//assertEq(new Number(1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).toWords(), "one quinquagintillion");
-console.log("All tests passed!");
-*/
