@@ -11,7 +11,7 @@ Welcome
 
 I'm Russ Harmon, a <span class="loading" id="age">(calculating)</span> year old
 programmer currently located in
-<span class="loading" id="{{ site.latitude_id }}">(locating)</span>. What you
+<span id="{{ site.latitude_id }}">{{ site.latitude_default }}</span>.  What you
 see below is some ramblings by me about myself or other things. Look if you want
 to.
 
