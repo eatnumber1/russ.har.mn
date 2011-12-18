@@ -71,7 +71,7 @@ You can chat with me via _xmpp_ and Google's chatback widget.
 +-- {: .section }
 # [Twitter](http://twitter.com/eatnumber1)
 Contacting Twitter...
-{: #twitter_update_list }
+{: #twitter_update_list .loading }
 =--
 
 {% comment %}
