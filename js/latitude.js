@@ -19,6 +19,8 @@ function doLatitude( id, elem ) {
 				elem.replaceWith(data.query.results.json.features.properties.reverseGeocode);
 			}
 		},
-		// TODO: Error handling
+		error: function( _, textStatus, errorThrown ) {
+			elem.replaceWith(textStatus + ": " + errorThrown);
+		}
 	});
 }

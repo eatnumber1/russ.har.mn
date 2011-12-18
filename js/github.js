@@ -15,15 +15,16 @@ function github_latest( count, username, elem ) {
 				}
 				var link = d.meta['Link'];
 				var data = cur.concat(d.data);
-				if( link != null && link.filter(function( elem ) {
+				return ( link != null && link.filter(function( elem ) {
 					return elem[1].rel == "next";
-				}).length != 0 ) {
-					return fetch(count, username, elem, page + 1, data, cont)
-				} else {
-					return cont(data);
-				}
+				}).length != 0 ) ?
+					fetch(count, username, elem, page + 1, data, cont) :
+					cont(data);
 			},
-			// TODO: Error handling
+			error: function( _, textStatus, error ) {
+				elem.replaceWith(textStatus + ": " + error.toString());
+				return;
+			}
 		});
 	};
 	fetch(count, username, elem, 1, [], function( data ) {
