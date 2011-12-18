@@ -9,9 +9,11 @@ section: Home
 Welcome
 =======
 
-I'm Russ Harmon, a twenty three year old programmer currently located in
-<span id="{{ site.latitude_id }}" class="loading">(loading)</span>. What you see below is some
-ramblings by me about myself or other things. Look if you want to.
+I'm Russ Harmon, a <span class="loading" id="age">(calculating)</span> year old
+programmer currently located in
+<span class="loading" id="{{ site.latitude_id }}">(locating)</span>. What you
+see below is some ramblings by me about myself or other things. Look if you want
+to.
 
 +-- {: .section }
 # Academics
@@ -27,7 +29,7 @@ The vast majority of my work can be found at my
 [GitHub](https://github.com/eatnumber1) page. What you can see below is the five
 most recent projects I've worked on at GitHub.
 +-- {: #github_{{ site.github_username }} }
-(loading)
+Contacting GitHub...
 {: #github_loading .loading }
 <ul class="compact recent" id="github_list"/>
 =--
@@ -69,7 +71,7 @@ You can chat with me via _xmpp_ and Google's chatback widget.
 +-- {: .section }
 # [Twitter](http://twitter.com/eatnumber1)
 Contacting Twitter...
-{: #twitter_update_list }
+{: #twitter_update_list .loading }
 =--
 
 {% comment %}

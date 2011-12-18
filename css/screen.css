@@ -195,8 +195,9 @@ ul.compact li a {
 /* @end */
 
 .loading {
-	font-size: 75%
-	color: silver;
+	font-size: 90%;
+	color: gray;
+	font-style: italic;
 }
 
 /* @group Header */
