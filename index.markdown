@@ -15,6 +15,24 @@ programmer currently located in
 see below is some ramblings by me about myself or other things. Look if you want
 to.
 
+{% comment %}
+This is here so it can be executed as early as possible.
+{% endcomment %}
+<script type="text/javascript">
+	$("#age").replaceWith(
+		new Number(
+			Math.floor(
+				(
+					new Date() -
+					new Date("{{ site.birthdate }}")
+				) /
+				31556926000 /* nanos per year */
+			)
+		).toWords()
+	);
+	doLatitude("{{ site.latitude_id }}", $("#{{ site.latitude_id }}"));
+</script>
+
 +-- {: .section }
 # Academics
 The main focus of my work at the moment is the completion of my studies at the

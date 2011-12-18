@@ -2,39 +2,22 @@
 layout: main
 ---
 
+<!-- Age calculation -->
+<script type="text/javascript" charset="UTF-8" src="/js/numbers.js"></script>
+
+<!-- Google Latitude Location -->
+<script type="text/javascript" charset="UTF-8" src="/js/latitude.js"></script>
+
 {{ content }}
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 <script type="text/javascript" src="/js/twitter.js"></script>
 <script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=eatnumber1&callback=twitterCallback&include_rts=1&count=1"></script>
 
-<!-- Google Latitude Location -->
-<script type="text/javascript" charset="UTF-8" src="/js/latitude.js"></script>
-<script type="text/javascript">
-	doLatitude("{{ site.latitude_id }}", $("#{{ site.latitude_id }}"));
-</script>
-
 <!-- Github recent projects -->
 <script type="text/javascript" charset="UTF-8" src="/js/github.js"></script>
 <script type="text/javascript">
 	github_latest(5, "{{ site.github_username }}", $("#github_{{ site.github_username }}"));
-</script>
-
-<!-- Age calculation -->
-<script type="text/javascript" charset="UTF-8" src="/js/numbers.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$("#age").replaceWith(
-		new Number(
-			Math.floor(
-				(
-					new Date() -
-					new Date("{{ site.birthdate }}")
-				) /
-				31556926000 /* nanos per year */
-			)
-		).toWords());
-});
 </script>
 
 {% comment %}
