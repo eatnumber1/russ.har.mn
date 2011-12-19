@@ -9,11 +9,10 @@ section: Home
 Welcome
 =======
 
-I'm Russ Harmon, a <span class="loading" id="age">(calculating)</span> year old
-programmer currently located in
-<span id="{{ site.latitude_id }}">{{ site.latitude_default }}</span>.  What you
-see below is some ramblings by me about myself or other things. Look if you want
-to.
+I'm Russ Harmon, a <span id="age">twenty three or so</span> year old programmer
+currently located in
+<span id="{{ site.latitude_id }}">New York, USA</span>.  What you see below is
+some ramblings by me about myself or other things. Look if you want to.
 
 {% comment %}
 This is here so it can be executed as early as possible.
