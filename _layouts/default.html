@@ -51,7 +51,7 @@
 
 	{% comment %}Hopefully a good guess of if the site is published.{% endcomment %}
 	{% if site.safe %}
-	<base href="http://{{ site.domain }}" target="_parent"/>
+	<base href="http://{{ site.domain }}" target="_self"/>
 	{% endif %}
 </head>
 <body id="{{ page.section }}">
