@@ -17,18 +17,41 @@
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Walter+Turncoat:regular"/>
 
+	{% if site.link %}
+	{% for link in site.link %}
+	<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.type %} type="{{ link.type }}"{% endif %}/>
+	{% endfor %}
+	{% endif %}
+
+	{% if page.link %}
+	{% for link in page.link %}
+	<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.type %} type="{{ link.type }}"{% endif %}/>
+	{% endfor %}
+	{% endif %}
+
+	{% if site.meta %}
+	{% for meta in site.meta %}
+	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
+	{% endfor %}
+	{% endif %}
+
 	{% if page.categories and page.categories != empty %}
 	<meta name="keywords" content="{{ page.categories | join:',' }}"/>
 	{% endif %}
 
-	<meta name="description" content="The personal website and blog of Russell Harmon"/>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endif %}"/>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
-	{% comment %}
-	<!-- Javascript Debugging -->
-	<script type="text/javascript" src="/js/ba-debug.js"></script>
-	{% endcomment %}
+	{% if page.meta %}
+	{% for meta in page.meta %}
+	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
+	{% endfor %}
+	{% endif %}
+
+	{% if site.safe %}
+	<base href="http://{{ site.domain }}" target="_parent"/>
+	{% endif %}
 </head>
 <body id="{{ page.section }}">
 	<div id="site">

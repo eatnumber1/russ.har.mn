@@ -2,8 +2,8 @@
 *[URL]: Uniform Resource Locator
 *[JSON]: JavaScript Object Notation
 {% comment %}
-// This doesn't work thanks to a bug in maruku when a substring of the abbr
-// string already exists as another abbr string (e.g. JSON above).
+This doesn't work thanks to a bug in maruku when a substring of the abbr string
+already exists as another abbr string (e.g. JSON above).
 *[JSONP]: JSON with padding
 {% endcomment %}
 *[Jekyll]: A blog-aware, static site generator in Ruby

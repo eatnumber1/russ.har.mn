@@ -2,6 +2,10 @@
 layout: top
 title: Home
 section: Home
+link:
+    - rel: canonical
+      href: /
+
 ---
 
 ![Photo of Russ Harmon](/images/russ_harmon.jpg){: .inset .right width=150 }
@@ -14,9 +18,7 @@ currently located in
 <span id="{{ site.latitude_id }}">New York, USA</span>.  What you see below is
 some ramblings by me about myself or other things. Look if you want to.
 
-{% comment %}
-This is here so it can be executed as early as possible.
-{% endcomment %}
+{% comment %} This is here so it can be executed as early as possible. {% endcomment %}
 <script type="text/javascript">
 	$("#age").replaceWith(
 		new Number(
@@ -57,23 +59,9 @@ Contacting GitHub...
 I periodically post to a programming blog entitled
 _[Machinae Elegantiam](/machinae)_.
 
-{% comment %}
-// TODO: Find a way to make this work.
-{% if post.excerpt %}
-* [{{ post.title }}]({{ post.url }}){: title="{{ post.excerpt }}"}
-{% else %}
-* [{{ post.title }}]({{ post.url }}) foo{: .date }
-{% endif %}
-{: .compact .recent }
-{% endcomment %}
-
 {% for post in site.categories.machinae limit: 3 %}
-<ul class="compact recent">
-	<li>
-		<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-		<span class="date">{{ post.date | date_to_string }}</span>
-	</li>
-</ul>
+* [{{ post.title }}]({{ post.url }}){% if post.excerpt %}{: title="{{ post.excerpt }}"}{% endif %}
+{: .compact .recent }
 {% endfor %}
 =--
 
