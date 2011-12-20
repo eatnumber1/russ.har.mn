@@ -49,17 +49,10 @@
 	{% endfor %}
 	{% endif %}
 
+	{% comment %}Hopefully a good guess of if the site is published.{% endcomment %}
 	{% if site.safe %}
 	<base href="http://{{ site.domain }}" target="_parent"/>
 	{% endif %}
-
-	<!--
-	safe: {{ site.safe }}
-	source: {{ site.source }}
-	destination: {{ site.destination }}
-	lsi: {{ site.lsi }}
-	pygments: {{ site.pygments }}
-	-->
 </head>
 <body id="{{ page.section }}">
 	<div id="site">
