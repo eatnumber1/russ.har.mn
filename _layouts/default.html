@@ -17,23 +17,21 @@
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Walter+Turncoat:regular"/>
 
-	{% if site.link %}
 	{% for link in site.link %}
 	<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.type %} type="{{ link.type }}"{% endif %}/>
 	{% endfor %}
-	{% endif %}
 
-	{% if page.link %}
 	{% for link in page.link %}
 	<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.type %} type="{{ link.type }}"{% endif %}/>
 	{% endfor %}
-	{% endif %}
 
-	{% if site.meta %}
 	{% for meta in site.meta %}
 	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
 	{% endfor %}
-	{% endif %}
+
+	{% for meta in page.meta %}
+	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
+	{% endfor %}
 
 	{% if page.categories and page.categories != empty %}
 	<meta name="keywords" content="{{ page.categories | join:',' }}"/>
@@ -42,12 +40,6 @@
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endif %}"/>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-
-	{% if page.meta %}
-	{% for meta in page.meta %}
-	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
-	{% endfor %}
-	{% endif %}
 
 	{% comment %}Hopefully a good guess of if the site is published.{% endcomment %}
 	{% if site.safe %}
