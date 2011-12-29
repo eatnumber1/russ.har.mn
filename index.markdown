@@ -2,6 +2,7 @@
 layout: top
 title: Home
 section: Home
+changefreq: always
 link:
     - rel: canonical
       href: /
