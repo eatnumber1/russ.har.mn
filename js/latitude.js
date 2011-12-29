@@ -5,22 +5,26 @@ function doLatitude( id, elem ) {
 		type: "json"
 	});
 	var full_url = url + "?" + data;
-	$.ajax({
-		url: "http://query.yahooapis.com/v1/public/yql",
-		dataType: "jsonp",
-		data: {
-			q: "SELECT * FROM json WHERE url='" + full_url + "'",
-			format: "json"
+
+	$.yql(
+		"SELECT features.properties.reverseGeocode FROM json WHERE url=@url",
+		{
+			url: "http://www.google.com/latitude/apps/badge/api?" + $.param({
+				user: id,
+				type: "json"
+			})
 		},
-		success: function( data ) {
+		function( data ) {
 			if( data.query.results.json.features == null ) {
-				elem.replaceWith($("<span/>", { style: "font-style: italic;" }).html("location unavailable"));
-			} else {
-				elem.replaceWith(data.query.results.json.features.properties.reverseGeocode);
+				elem.replaceWith($("<span/>", {
+					style: "font-style: italic;"
+				}).html("location unavailable"));
+				return;
 			}
+			elem.replaceWith(data.query.results.json.features.properties.reverseGeocode);
 		},
-		error: function( _, textStatus, errorThrown ) {
+		function( _, textStatus, errorThrown ) {
 			elem.replaceWith(textStatus + ": " + errorThrown);
 		}
-	});
+	);
 }
