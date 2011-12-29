@@ -108,7 +108,7 @@ module Jekyll
           changefreq = ""
         end
         
-        unless path =~/error/
+        unless path =~/error/ or ( site.config['sitemap_exclude'] != nil and site.config['sitemap_exclude'].include?(path) )
           result += entry(path, mod_date, changefreq, site)
         end
       }
@@ -143,12 +143,12 @@ module Jekyll
     #    is output for this property.
     def entry(path, date, changefreq, site)
       # Remove the trailing slash from the baseurl if it is present, for consistency.
-      baseurl = site.config['baseurl']
+      baseurl = site.config['domain']
       baseurl = baseurl[0..-2] if baseurl=~/\/$/
       
       "
   <url>
-      <loc>#{baseurl}#{path}</loc>
+      <loc>http://#{baseurl}#{path}</loc>
       <lastmod>#{date.strftime("%Y-%m-%d")}</lastmod>#{if changefreq.length > 0
           "\n      <changefreq>#{changefreq}</changefreq>" end}
   </url>"
