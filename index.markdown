@@ -15,7 +15,7 @@ Welcome
 
 I'm Russ Harmon, a <span id="age">twenty three or so</span> year old programmer
 currently located in
-<span id="{{ site.latitude_id }}">New York, USA</span>.  What you see below is
+<span id="{{ site.google_latitude_id }}">New York, USA</span>.  What you see below is
 some ramblings by me about myself or other things. Look if you want to.
 
 {% comment %} This is here so it can be executed as early as possible. {% endcomment %}
@@ -31,7 +31,7 @@ some ramblings by me about myself or other things. Look if you want to.
 			)
 		).toWords()
 	);
-	doLatitude("{{ site.latitude_id }}", $("#{{ site.latitude_id }}"));
+	doLatitude("{{ site.google_latitude_id }}", $("#{{ site.google_latitude_id }}"));
 </script>
 
 +-- {: .section }
