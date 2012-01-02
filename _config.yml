@@ -4,15 +4,18 @@ permalink: /blog/:year-:month-:day/:title
 markdown: maruku
 
 domain: rus.har.mn
+description: The personal website and blog of Russell Harmon
 #disqus_developer: 1
 birthdate: August 9, 1988
 disqus_shortname: eatnumber1
-github_username: eatnumber1
 twitter_username: eatnumber1
 google_latitude_id: 4048757213362106746
 google_analytics_id: UA-10349264-2
 google_plus_id: 112862864127564162879
 sitemap_exclude: /test/
+
+github_username: eatnumber1
+github_excludes: eatnumber1.github.com
 
 maruku:
     use_divs: true
@@ -20,5 +23,3 @@ maruku:
     png_engine: blahtex
     png_dir: images/latex/
     png_url: /images/latex/
-
-description: The personal website and blog of Russell Harmon

@@ -13,7 +13,13 @@ layout: main
 <!-- Github recent projects -->
 <script type="text/javascript" charset="UTF-8" src="/js/github.js"></script>
 <script type="text/javascript">
-	github_latest(5, "{{ site.github_username }}", $("#github_{{ site.github_username }}"));
+	var github_excludes = new Array();
+	{% if site.github_excludes %}
+	{% for exclude in site.github_excludes %}
+	github_excludes.push("{{ exclude }}");
+	{% endfor %}
+	{% endif %}
+	github_latest(5, "{{ site.github_username }}", $("#github_{{ site.github_username }}"), github_excludes);
 </script>
 
 <!-- Twitter timeline -->
