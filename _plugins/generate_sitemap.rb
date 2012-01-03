@@ -89,7 +89,7 @@ module Jekyll
           path = page.permalink
         else
           # Be smart about the output filename.
-          path.gsub!(/.md$/, ".html")
+          path.gsub!(/\.(mk?d|markdown)$/, ".html")
         end
 
         # Ignore SASS, SCSS, and CSS files
