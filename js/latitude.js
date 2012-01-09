@@ -15,13 +15,9 @@ function doLatitude( id, elem ) {
 			})
 		},
 		function( data ) {
-			if( data.query.results.json.features == null ) {
-				elem.replaceWith($("<span/>", {
-					style: "font-style: italic;"
-				}).html("location unavailable"));
-				return;
-			}
-			elem.replaceWith(data.query.results.json.features.properties.reverseGeocode);
+			data = data.query.results;
+			if( data == null ) return; // Location unavailable... do nothing
+			elem.replaceWith(data.json.features.properties.reverseGeocode);
 		},
 		function( _, textStatus, errorThrown ) {
 			elem.replaceWith(textStatus + ": " + errorThrown);
