@@ -33,12 +33,12 @@ The following code would become optimizable if my proposed changes were
 introduced.
 {% highlight c %}
 int main( int argc, char *argv[] ) {
-	if( atoi(argv[1]) ) {
-		// Do something interesting knowing that the user specified true on the
-		// command line.
+	uint32_t i = atoi(argv[1]);
+	if( i < 2 ) {
+		// The compiler could create three different code paths for i here; one
+		// each for 1, 2 and 3, and then constant inline those values.
 	} else {
-		// Do something interesting knowing that the user specified false on the
-		// command line.
+		// The compiler doesn't know what the value is.
 	}
 }
 {% endhighlight %}
