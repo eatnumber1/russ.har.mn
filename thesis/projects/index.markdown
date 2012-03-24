@@ -36,7 +36,7 @@ int main( int argc, char *argv[] ) {
 	uint32_t i = atoi(argv[1]);
 	if( i < 2 ) {
 		// The compiler could create three different code paths for i here; one
-		// each for 1, 2 and 3, and then constant inline those values.
+		// each for 1, 2 and 3, and then constant fold those values.
 	} else {
 		// The compiler doesn't know what the value is.
 	}
