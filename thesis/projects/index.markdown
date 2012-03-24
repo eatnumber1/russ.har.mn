@@ -43,7 +43,7 @@ int main( int argc, char *argv[] ) {
 }
 {% endhighlight %}
 
-# Reclaimable anonymous cache memory in Linux
+# Reclaimable Anonymous Cache Memory in Linux
 There are many programs today which generate "cached" values, which while
 regeneratable, are expensive to do. When the system is memory constrained
 however, it is frequently desirable to dump those caches so execution may
@@ -54,8 +54,10 @@ that memory when under heavy load.
 # Re-designing the build system
 Coming soon...
 
-# LLVM Language "agnostic" Introspection
+# LLVM Language "Agnostic" Introspection
 Coming soon...
+
+{% include definitions.markdown %}
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4

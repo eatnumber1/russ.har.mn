@@ -8,6 +8,7 @@ already exists as another abbr string (e.g. JSON above).
 {% endcomment %}
 *[Jekyll]: A blog-aware, static site generator in Ruby
 *[YQL]: Yahoo! query language
+*[LLVM]: Low Level Virtual Machine
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4 tw=80

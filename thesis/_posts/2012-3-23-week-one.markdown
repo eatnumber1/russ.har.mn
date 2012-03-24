@@ -1,0 +1,49 @@
+---
+layout: thesis
+title: Week One Progress
+excerpt: Good style in scientific writing. TODO
+---
+
+# Week One
+
+* Table of Contents
+{: toc}
+
+## Lessons Learned from Chapter 2: Good Style
+* Science writing does not have to be dull.
+* Poor writing prejudices readers against the presentation material.
+* Text should be taut. It is admirable to say much in a small space.
+* Break the rules if there is a good reason to do so.
+* Don't qualify your claims too much. Some is appropriate though.
+* Each topic should be discussed to a similar depth.
+* Do not imply that the paper is sentient.
+* The use of "we" is a disputed topic.
+* Don't show off; write for an ordinary reader.
+* Be specific; not being so can imply ulterior motives or inferior
+  understanding.
+
+## Lessons Learned from Chapter 10: Doing Research, Part 1
+* A paper is only a tiny window into your research.
+* The origin of a research investigation is typically a moment if insight.
+* Clear short-term and long-term goals are necessary to begin a research
+  project.
+* The fact that a topic is in a fashionable area should be at most a minor
+  consideration.
+* Novice researchers should strive for easily achieved outcomes.
+* There is no well-defined role for an advisor.
+* Research projects build on a body of prior research.
+* Reading papers is not like reading textbooks. You don't need to understand
+  every line.
+* Smaller, more attainable deadlines are critical to a project's success.
+* Approach a research project with the goal of the paper in mind, not the goal
+  of the experiment.
+
+## MS Project/Thesis Topics
+Potential topics for my MS project or thesis can be found
+[here](/thesis/projects)
+
+{% include definitions.markdown %}
+
+{% comment %}
+vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+{% endcomment %}

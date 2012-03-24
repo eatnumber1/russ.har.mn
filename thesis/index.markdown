@@ -4,28 +4,23 @@ title: Home
 section: Home
 ---
 
-{% comment %}
-TODO: Split to multiple pages.
-{% endcomment %}
-
 # Introduction
 
 Throughout the 20112 academic quarter, I will be detailing my progress in my MS Project/Thesis seminar class below.
 
 # Table of Contents
 
-* Table of contents gets automatically filled here.
-{: toc}
+{% for post in site.categories.thesis %}
+<div class="section list">
+	<h1>{{ post.date | date_to_string }}</h1>
+	<p class="line">
+		<a class="title" href="{{ post.url }}">{{ post.title }}</a>
+	</p>
+	<span class="excerpt">{{ post.excerpt | markdownify }}</span>
+</div>
+{% endfor %}
 
-# Progress
-## Week 1
-
-### Lessons learned from Chapter 2: Good Style
-This assignment is not complete!
-
-### Lessons learned from Chapter 10: Doing Research, part 1
-This assignment is not complete!
-
+{% include definitions.markdown %}
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4
