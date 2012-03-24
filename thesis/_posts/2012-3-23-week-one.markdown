@@ -1,7 +1,7 @@
 ---
 layout: thesis
 title: Week One Progress
-excerpt: Good style in scientific writing. TODO
+excerpt: Good style in scientific writing. How to do research.
 ---
 
 # Week One
