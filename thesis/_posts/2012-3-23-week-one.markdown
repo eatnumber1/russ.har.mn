@@ -40,7 +40,7 @@ excerpt: Good style in scientific writing. How to do research.
 
 ## MS Project/Thesis Topics
 Potential topics for my MS project or thesis can be found
-[here](/thesis/projects)
+[here](/thesis/projects).
 
 {% include definitions.markdown %}
 
