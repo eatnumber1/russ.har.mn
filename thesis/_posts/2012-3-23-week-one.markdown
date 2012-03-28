@@ -9,7 +9,7 @@ excerpt: Good style in scientific writing. How to do research.
 * Table of Contents
 {: toc}
 
-## Lessons Learned from Chapter 2: Good Style
+## Lessons Learned from Chapter Two: Good Style
 * Science writing does not have to be dull.
 * Poor writing prejudices readers against the presentation material.
 * Text should be taut. It is admirable to say much in a small space.
@@ -22,7 +22,7 @@ excerpt: Good style in scientific writing. How to do research.
 * Be specific; not being so can imply ulterior motives or inferior
   understanding.
 
-## Lessons Learned from Chapter 10: Doing Research, Part 1
+## Lessons Learned from Chapter Ten: Doing Research, Part 1
 * A paper is only a tiny window into your research.
 * The origin of a research investigation is typically a moment if insight.
 * Clear short-term and long-term goals are necessary to begin a research
