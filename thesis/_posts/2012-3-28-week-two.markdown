@@ -1,0 +1,22 @@
+---
+layout: thesis
+title: Week Two Progress
+excerpt: 
+---
+
+# Week Two
+
+* Table of Contents
+{: toc}
+
+# Lessons Learned from Chapter Three: Style Specifics
+Coming soon...
+
+# Lessons Learned from Chapter Ten: Doing Research, Part Two
+Coming soon...
+
+{% include definitions.markdown %}
+
+{% comment %}
+vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+{% endcomment %}

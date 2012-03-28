@@ -51,6 +51,14 @@ continue. I would like to add a facility to Linux whereby specific memory
 regions may be marked as "reclaimable," allowing the kernel to reclaim and reuse
 that memory when under heavy load.
 
+Possible advisors: Warren Carithers.
+
+3/28/12 - Upon investigation, it seems that this concept is already
+[patented][purgeable-memory] by Apple. It is unclear whether this will prevent
+me from doing this in Linux, as I will not be selling it.
+
+[purgeable-memory]: http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=1&f=G&l=50&d=PTXT&S1=778626.AP.&OS=APN/778626&RS=APN/778626A "Managing purgeable memory objects"
+
 # Re-designing the build system
 Coming soon...
 
