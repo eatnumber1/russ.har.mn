@@ -53,9 +53,13 @@ that memory when under heavy load.
 
 Possible advisors: Warren Carithers.
 
-3/28/12 - Upon investigation, it seems that this concept is already
+__3/28/12__ - Upon investigation, it seems that this concept is already
 [patented][purgeable-memory] by Apple. It is unclear whether this will prevent
 me from doing this in Linux, as I will not be selling it.
+
+__3/29/12__ - I've emailed Linus to see if he would be willing to accept a patch
+which implements this. Professor Carithers has also said he'd get me in contact
+with RIT's patent attorney.
 
 [purgeable-memory]: http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=1&f=G&l=50&d=PTXT&S1=778626.AP.&OS=APN/778626&RS=APN/778626A "Managing purgeable memory objects"
 
