@@ -38,6 +38,8 @@ excerpt: Good style in scientific writing. How to do research.
 * Approach a research project with the goal of the paper in mind, not the goal
   of the experiment.
 
+Part two can be found [here](/blog/2012-03-28/week-two/#lessons_learned_from_chapter_ten_doing_research_part_two)
+
 ## MS Project/Thesis Topics
 Potential topics for my MS project or thesis can be found
 [here](/thesis/projects).
