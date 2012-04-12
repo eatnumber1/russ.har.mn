@@ -43,6 +43,10 @@ int main( int argc, char *argv[] ) {
 }
 {% endhighlight %}
 
+__3/31/12__ - A friend of mine pointed me
+[here](http://hackage.haskell.org/trac/ghc/ticket/4288). Apparently this is
+already an existing idea in Haskell, albeit perhaps in a more limited scope.
+
 # Reclaimable Anonymous Cache Memory in Linux
 There are many programs today which generate "cached" values, which while
 regeneratable, are expensive to do. When the system is memory constrained
@@ -60,6 +64,8 @@ me from doing this in Linux, as I will not be selling it.
 __3/29/12__ - I've emailed Linus to see if he would be willing to accept a patch
 which implements this. Professor Carithers has also said he'd get me in contact
 with RIT's patent attorney.
+
+__4/10/12__ - Linus is unwilling to accept this kind of a patent-encumbered patch.
 
 [purgeable-memory]: http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p=1&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=1&f=G&l=50&d=PTXT&S1=778626.AP.&OS=APN/778626&RS=APN/778626A "Managing purgeable memory objects"
 
