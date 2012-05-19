@@ -6,7 +6,7 @@ excerpt: A correct build system must be able to solve the problem of traversal-t
 
 A few years ago, I took a hard look at the current state of the art of build
 systems. The ones I looked at were the ones that I had heard of, specifically
-[Make][make], [SCons][scons], [CMake][cmake], [Jam][jam], TODO. I slowly came to
+[Make][make], [SCons][scons], [CMake][cmake], [Jam][jam]. I slowly came to
 the realization every build system designer since the creators of Make (which
 arguably does it right) have been thinking about building software all wrong.
 
