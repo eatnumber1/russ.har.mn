@@ -9,6 +9,7 @@ already exists as another abbr string (e.g. JSON above).
 *[Jekyll]: A blog-aware, static site generator in Ruby
 *[YQL]: Yahoo! query language
 *[LLVM]: Low Level Virtual Machine
+*[Nethack]: A single-player roguelike video game originally released in 1987.
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
