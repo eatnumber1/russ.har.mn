@@ -10,6 +10,9 @@ already exists as another abbr string (e.g. JSON above).
 *[YQL]: Yahoo! query language
 *[LLVM]: Low Level Virtual Machine
 *[Nethack]: A single-player roguelike video game originally released in 1987.
+*[GCC]: GNU Compiler Collection
+*[DSL]: Domain specific language
+*[Make]: A utility that automatically builds executable programs and libraries from source code by reading files called makefiles which specify how to derive the target program.
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
