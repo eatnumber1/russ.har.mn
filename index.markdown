@@ -37,10 +37,10 @@ some ramblings by me about myself or other things. Look if you want to.
 
 +-- {: .section }
 # Academics
-The main focus of my work at the moment is the completion of my studies at the
-[Rochester Institute of Technology](http://www.rit.edu/) which I attend as a
-full-time student. Studying computer science, I hope to complete my studies at
-the end of February, 2012.
+The main focus of my work at the moment is the completion of my graduate studies
+at the [Rochester Institute of Technology](http://www.rit.edu/) which I attend
+as a full-time student. Studying computer science, I hope to complete my studies
+at the end of February, 2013.
 =--
 
 +-- {: .section }
