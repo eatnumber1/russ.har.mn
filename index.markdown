@@ -67,14 +67,6 @@ _[Machinae Elegantiam](/machinae)_.
 =--
 
 +-- {: .section }
-# Chat
-You can chat with me via _xmpp_ and Google's chatback widget.
-<br/>
-![](http://www.google.com/talk/service/badge/Show?tk=z01q6amlq69k34bqdpiumkcmscad4d6g93v358un157gamspjobu1q8jikb4chn8fqjjsvq3mhc8ihhq60hgbu4iq7g1a7ffmvi0u9s8ch94d2qgpp2ssbepstoj19p3lu8eaaq4msnfksfrll6a6iqsaiddia4j40eatqt1r&amp;w=9&amp;h=9){: height="9" width="9" }
-[Chat with Russell Harmon](http://www.google.com/talk/service/badge/Start?tk=z01q6amlq69k34bqdpiumkcmscad4d6g93v358un157gamspjobu1q8jikb4chn8fqjjsvq3mhc8ihhq60hgbu4iq7g1a7ffmvi0u9s8ch94d2qgpp2ssbepstoj19p3lu8eaaq4msnfksfrll6a6iqsaiddia4j40eatqt1r){: target="_blank" title="Click here to chat with Russell Harmon" }
-=--
-
-+-- {: .section }
 # [Twitter](http://twitter.com/{{ site.twitter_username }})
 Contacting Twitter...
 {: #twitter_update_list .loading }
