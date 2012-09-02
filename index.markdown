@@ -14,7 +14,7 @@ link:
 Welcome
 =======
 
-I'm Russ Harmon, a <span id="age">twenty three or so</span> year old programmer
+I'm Russ Harmon, a <span id="age">twenty four or so</span> year old programmer
 currently located in
 <span id="{{ site.google_latitude_id }}">New York, USA</span>.  What you see below is
 some ramblings by me about myself or other things. Look if you want to.
