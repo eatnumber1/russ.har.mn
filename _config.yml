@@ -17,6 +17,7 @@ sitemap_exclude: /test/
 github_username: eatnumber1
 github_excludes:
     - eatnumber1.github.com
+    - oh-my-zsh
 
 maruku:
     use_divs: true
