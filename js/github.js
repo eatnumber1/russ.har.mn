@@ -1,29 +1,29 @@
 function github_latest( count, username, elem, excludes ) {
 	var id_idx = 0, argmap = {};
 	$.yql(
-		"SELECT repository.name, repository.url, repository.description, repository.pushed-at FROM github.user.repos WHERE id=@id" +
+		"SELECT json.name, json.html_url, json.description, json.pushed_at FROM json WHERE url=@url" +
 		excludes.map(function( elem, idx ) {
 			var ret = "", argname = "name" + id_idx++;
-			if( idx == 0 ) ret += " AND repository.name NOT IN ( ";
+			if( idx == 0 ) ret += " AND json.name NOT IN ( ";
 			ret += "@" + argname;
 			if( idx == excludes.length - 1 ) ret += " )";
 			argmap[argname] = elem;
 			return ret;
 		}).join(", ") +
-		" | sort(field='repository.pushed-at', descending='true') | truncate(count=@count)",
+		" | sort(field='json.pushed_at', descending='true') | truncate(count=@count)",
 		$.extend({
-			id: username,
+			url: "https://api.github.com/users/" + username + "/repos",
 			count: count
 		}, argmap),
 		function( data ) {
 			elem.find("#github_loading").remove();
 			var list = elem.find("#github_list");
-			data.query.results.repositories.forEach(function( d ) {
-				d = d.repository;
+			data.query.results.json.forEach(function( d ) {
+				d = d.json;
 				if( excludes.indexOf(d.name) != -1 ) return;
 				$("<li/>")
 					.append(
-						$("<a/>", { href: d.url })
+						$("<a/>", { href: d.html_url })
 							.append(d.name)
 					).append(": " + d.description)
 					.appendTo(list);

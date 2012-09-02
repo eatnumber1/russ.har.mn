@@ -15,7 +15,8 @@ google_plus_id: 112862864127564162879
 sitemap_exclude: /test/
 
 github_username: eatnumber1
-github_excludes: eatnumber1.github.com
+github_excludes:
+    - eatnumber1.github.com
 
 maruku:
     use_divs: true
