@@ -7,3 +7,6 @@
 [submodule "js/_jquery-yql"]
 	path = js/_jquery-yql
 	url = git://github.com/gabrielfalcao/jquery-yql
+[submodule "js/_jquery-timeago"]
+	path = js/_jquery-timeago
+	url = git://github.com/rmm5t/jquery-timeago.git
