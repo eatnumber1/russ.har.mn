@@ -4,3 +4,6 @@
 [submodule "_plugins/jekyll_press"]
 	path = _plugins/jekyll_press
 	url = git://github.com/stereobooster/jekyll_press.git
+[submodule "js/_jquery-yql"]
+	path = js/_jquery-yql
+	url = git://github.com/gabrielfalcao/jquery-yql
