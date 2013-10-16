@@ -22,23 +22,29 @@
 
 # Modified from https://raw.github.com/dryman/dryman.github.com/src/plugins/graphviz_block.rb
 
+GRAPHVIZ_DIR = File.expand_path('../../source/images/graphviz', __FILE__)
+FileUtils.mkdir_p(GRAPHVIZ_DIR)
 
 module Jekyll
-  class GraphvizBlock < Liquid::Block
-
+  class GraphvizBlock < Liquid::Raw
     def render(context)
-      non_markdown = /(&amp|&lt|&nbsp|&quot|&gt|<\/p>|<\/h.>)/m
-      code = super
-      unless non_markdown.match(code)
-        svg = nil
-        IO.popen("dot -Tsvg", 'r+') do |pipe|
-          pipe.puts(code)
-          pipe.close_write
-          svg = pipe.read
-        end
-        svg = svg.lines.to_a[3..-1].join # Strip off the first two lines (doctype)
-        svg
-      end 
+      code = super(context)
+      destination = File.join(
+        context.registers[:site].config["destination"],
+        "images/graphviz"
+      )
+      FileUtils.mkdir_p(destination) unless Dir.exists? destination
+      svg_name = "g-#{Digest::MD5.hexdigest(code)}.svg"
+      svg = File.join(destination, svg_name)
+      puts "dot -Tsvg -o #{svg}"
+      IO.popen("dot -Tsvg -o #{svg}", 'a') do |pipe|
+        pipe.puts(code)
+        pipe.close_write
+      end
+      #svg = svg.lines.to_a[3..-1].join # Strip off the first two lines (doctype)
+      #svg
+      web_svg = "/images/graphviz/#{svg_name}"
+      "<embed class='graphviz' src='#{web_svg}' type='image/svg+xml' />"
     end
   end
 end
