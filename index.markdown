@@ -40,16 +40,15 @@ errors.
 
 +-- {: .section }
 # Academics
-The main focus of my work at the moment is the completion of my graduate studies
-at the [Rochester Institute of Technology](http://www.rit.edu/) which I attend
-as a full-time student. Studying computer science, I hope to complete my studies
-at the beginning of December, 2013.
+I completed my studies at the [Rochester Institute of
+Technology](http://www.rit.edu/) in December, 2013. My thesis can be found
+[here][ruminate-thesis].
 =--
 
 +-- {: .section }
 # Code
 
-I'm currently actively working on [Ruminate], an introspective library for C.
+I'm actively working on [Ruminate], an introspective library for C.
 
 The vast majority of my other work can be found at my
 [GitHub](https://github.com/eatnumber1) page. What you can see below is the five
@@ -73,6 +72,7 @@ _[Machinae Elegantiam](/machinae)_.
 =--
 
 [Ruminate]: http://rus.har.mn/ruminate/
+[ruminate-thesis]: http://rus.har.mn/files/project-report.pdf
 
 {% comment %}
 vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
