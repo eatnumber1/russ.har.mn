@@ -23,10 +23,13 @@ layout: main
 </script>
 
 <!-- Twitter timeline -->
+{% comment %}
+API v1 from twitter is gone.
 <script type="text/javascript" charset="UTF-8" src="/js/twitter.js"></script>
 <script type="text/javascript">
 	twitter_latest("{{ site.twitter_username }}", $("#twitter_update_list"));
 </script>
+{% endcomment %}
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4
