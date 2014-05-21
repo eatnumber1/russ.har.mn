@@ -1,6 +1,6 @@
-pygments: true
+highlighter: pygments
 permalink: /blog/:year-:month-:day/:title
-markdown: maruku
+markdown: kramdown
 
 domain: rus.har.mn
 description: The personal website and blog of Russell Harmon
