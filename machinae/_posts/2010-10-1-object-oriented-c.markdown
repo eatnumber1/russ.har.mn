@@ -26,5 +26,5 @@ This creates a `String` object which inherits from `Object` and has a field
 More to come... _maybe_.
 
 {% comment %}
-vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}

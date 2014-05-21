@@ -21,5 +21,5 @@ all you have to do is throw some javascript in to the page. One example is
 posts.
 
 {% comment %}
-vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}

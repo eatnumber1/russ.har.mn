@@ -66,5 +66,5 @@ int main() {
 {% endhighlight %}
 
 {% comment %}
-vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}

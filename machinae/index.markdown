@@ -45,5 +45,5 @@ programming, and anything else computer related he cares to post.
 {% endunless %}
 
 {% comment %}
-vim: ft=jekyll sw=4 ts=4 sts=4
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}

@@ -143,5 +143,5 @@ also gave a presentation on the Nethack build system which can be seen
 {% include definitions.markdown %}
 
 {% comment %}
-vim: sw=4 ts=4 sts=4 tw=80
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}

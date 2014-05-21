@@ -62,5 +62,5 @@ arrays as `$@` is for the _positional parameters_.
 Maybe I'll explain more when I'm less lazy.
 
 {% comment %}
-vim: ft=jekyll sw=4 ts=4 sts=4 tw=80
+vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
 {% endcomment %}
