@@ -17,28 +17,8 @@ Welcome
 =======
 
 I'm Russ Harmon, a <span id="age">twenty five or so</span> year old programmer
-currently located in <span id="{{ site.google_latitude_id }}">San Francisco,
-CA</span>.  What you see below is some ramblings by me about myself or other
-things.
-
-{% comment %} This is here so it can be executed as early as possible. {% endcomment %}
-{% comment %} This gets wrapped in CDATA tags which causes javascript syntax
-errors.
-<script type="text/javascript">
-	$("#age").replaceWith(
-		new Number(
-			Math.floor(
-				(
-					new Date() -
-					new Date("{{ site.birthdate }}")
-				) /
-				31556926000 /* nanos per year */
-			)
-		).toWords()
-	);
-	doLatitude("{{ site.google_latitude_id }}", $("#{{ site.google_latitude_id }}"));
-</script>
-{% endcomment %}
+currently located in San Francisco, CA.  What you see below is some ramblings by
+me about myself or other things.
 
 <div class="section">
 # Academics

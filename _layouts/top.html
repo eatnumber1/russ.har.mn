@@ -9,12 +9,6 @@ includes:
 <!-- Age calculation -->
 <script type="text/javascript" charset="UTF-8" src="/js/numbers.js"></script>
 
-{% comment %}
-Latitude is gone
-<!-- Google Latitude Location -->
-<script type="text/javascript" charset="UTF-8" src="/js/latitude.js"></script>
-{% endcomment %}
-
 {{ content }}
 
 <!-- Github recent projects -->
@@ -28,15 +22,6 @@ Latitude is gone
 	{% endif %}
 	github_latest(5, "{{ site.github_username }}", $("#github_{{ site.github_username }}"), github_excludes);
 </script>
-
-{% comment %}
-<!-- Twitter timeline -->
-API v1 from twitter is gone.
-<script type="text/javascript" charset="UTF-8" src="/js/twitter.js"></script>
-<script type="text/javascript">
-	twitter_latest("{{ site.twitter_username }}", $("#twitter_update_list"));
-</script>
-{% endcomment %}
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4
