@@ -43,6 +43,11 @@
 	<script type="text/javascript" src="/js/jquery.yql.js"></script>
 	<script type="text/javascript" src="/js/jquery.timeago.js"></script>
 
+	{% for incl in page.includes %}
+		{% capture incl_fn %}{{ incl }}.markdown{% endcapture %}
+		{% include {{ incl_fn }} %}
+	{% endfor %}
+
 	{% comment %}Hopefully a good guess of if the site is published.{% endcomment %}
 	{% if site.safe %}
 	<base href="http://{{ site.domain }}" target="_self"/>
