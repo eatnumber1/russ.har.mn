@@ -1,12 +1,19 @@
 ---
 layout: main
+includes:
+  - jquery
+  - jquery-yql
+  - jquery-timeago
 ---
 
 <!-- Age calculation -->
 <script type="text/javascript" charset="UTF-8" src="/js/numbers.js"></script>
 
+{% comment %}
+Latitude is gone
 <!-- Google Latitude Location -->
 <script type="text/javascript" charset="UTF-8" src="/js/latitude.js"></script>
+{% endcomment %}
 
 {{ content }}
 
@@ -22,8 +29,8 @@ layout: main
 	github_latest(5, "{{ site.github_username }}", $("#github_{{ site.github_username }}"), github_excludes);
 </script>
 
-<!-- Twitter timeline -->
 {% comment %}
+<!-- Twitter timeline -->
 API v1 from twitter is gone.
 <script type="text/javascript" charset="UTF-8" src="/js/twitter.js"></script>
 <script type="text/javascript">

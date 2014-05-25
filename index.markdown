@@ -4,9 +4,10 @@ title: Home
 section: Home
 changefreq: always
 link:
-    - rel: canonical
-      href: /
-
+  - rel: canonical
+    href: /
+includes:
+  - jquery
 ---
 {::options parse_block_html="true" /}
 
