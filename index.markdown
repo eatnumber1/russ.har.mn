@@ -69,7 +69,7 @@ I periodically post to a programming blog entitled
 _[Machinae Elegantiam](/machinae)_.
 
 {% for post in site.categories.machinae limit: 3 %}
-* [{{ post.title }}]({{ post.url }}){: title="{{ post.excerpt | strip_html }}"}
+* [{{ post.title }}]({{ post.url }}){: title="{{ post.excerpt | strip_html | truncatewords: 20 }}"}
 {: .compact .recent }
 {% endfor %}
 </div>
