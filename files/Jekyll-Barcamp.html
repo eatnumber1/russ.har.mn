@@ -1,54 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-    <meta name="description" content="Jekyll Transform your text into a monster Jekyll Website generator Simple Blog aware Static HTML Liquid templating engine Jekyll Directory Layout /_config.yml /_layouts/_layouts/default.html/post.html/_posts/_posts/2007-10-29-my-blog-post.markdown/_posts/2009-04-26-barcamp-albany.markdown /_site/index.html Liquid Templating language Filters - text processing {{ page.categories | join:',' | replace: ‘#’, ‘/’ }} {% if page.categories and page.categories != empty %} ... {% endif %} Tags - control flow Liquid Example {% assign first_post = site.posts.first %} &lt;div&gt; 	&lt;h2&gt; 		&lt;a href=&quot;{{ first_post.url }}&quot;&gt;{{ first_post.title }}&lt;/a&gt; 	&lt;/h2&gt; 	{{ first_post.content }} 	&lt;p&gt; 		&lt;a href=&quot;{{ first_post.url }}&quot;&gt;Read More &amp;raquo;&lt;/a&gt; 	&lt;/p&gt; &lt;/div&gt; &lt;div&gt; 	&lt;h3&gt;recent posts&lt;/h3&gt; 	&lt;ul&gt; 		{% for post in site.posts limit: 7 %} 		&lt;li&gt; 			&lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; 		&lt;/li&gt; 		{% endfor %} 	&lt;/ul&gt; &lt;/div&gt; Liquid assigncapturecasecommentcycleforif includeunless Tags Liquid datecapitalizedowncaseupcasefirstlastjoinsortmapsizeescapeescape_oncestrip_htmlstrip_newlinesnewline_to_brreplacereplace_firstremoveremove_firsttruncatetruncatewordsprependappendminusplustimesdivided_by Filters YAML Front matter Indicates to Jekyll to process the file Goes at the head of the file Layout - The file from /_layouts to use Unknown variables will be available in liquid ---layout: posttitle: Object Oriented Ccategories: [programming, c]--- Layouts /_layouts Templates which posts are inserted into Post content available via liquid {{ content }} Posts Your “dynamic content” Formatted as YEAR-MONTH-DATE-title.MARKUP 2011-2-19-barcamp-presentation.markdown Markup languages supported Markdown Textile Posts Example --- layout: post title: Jekyll at Barcamp categories: [jekyll, web, barcamp] ---  This is an example post I've made for my presentation at[Barcamp](http://barcamp.org/). What follows is an example _hello world_ program.{% highlight c %}#include &lt;stdio.h&gt;int main() {    printf(&quot;Hello World!\n&quot;);    return 0;}{% endhighlight %} Output /_site HTML output by Jekyll Serve this Output Extras Dynamic Content Comments Disqus Social Networking Twitter widget  Syntax Highlighting Pygments Generates CSS span elements {% highlight c %} #include &lt;stdio.h&gt; int main() {     printf(&quot;Hello World!\n&quot;);     return 0; } {% endhighlight %} Atom Atom feeds achievable using Liquid extensions {% for post in site.posts %} &lt;entry&gt;   &lt;title&gt;{{ post.title }}&lt;/title&gt;   &lt;link href=&quot;http://{{ site.domain }}{{ post.url }}&quot;/&gt;   &lt;updated&gt;{{ post.date | date_to_xmlschema }}&lt;/updated&gt;   &lt;!-- RFC 4151 compliant tag --&gt;   &lt;id&gt;tag:{{ site.domain }},{{ post.date | date: &quot;%Y-%m-%d&quot; }}:{{ post.id | replace: &quot;#&quot;, &quot;/&quot; }}&lt;/id&gt;   {% for category in post.categories %}   &lt;category scheme=&quot;http://{{ site.domain }}/tag&quot; term=&quot;{{ category }}&quot;/&gt;   {% endfor %}   &lt;content type=&quot;html&quot;&gt;{{ post.content | xml_escape }}&lt;/content&gt; &lt;/entry&gt; {% endfor %} Github GitHub hosts Jekyll generated websites. Create a repository named username.github.com Push Jekyll code to it Your website is available at http://username.github.com Create a file named CNAME and point a DNS entry to GitHub with the single line being the DNS entry Your website is available at CNAME - http://eatnumber1.com EOF Russell Harmon Rochester Institute of Technology Department of Computer Science http://github.com/mojombo/jekyll"/>
-    <title></title>
-    <script type="text/javascript" language="javascript">
-//      <![CDATA[
-            var images = new Array (17);
-            images[0] = "Jekyll-Barcamp_files/Jekyll-Barcamp.001.png";
-            images[1] = "Jekyll-Barcamp_files/Jekyll-Barcamp.002.png";
-            images[2] = "Jekyll-Barcamp_files/Jekyll-Barcamp.003.png";
-            images[3] = "Jekyll-Barcamp_files/Jekyll-Barcamp.004.png";
-            images[4] = "Jekyll-Barcamp_files/Jekyll-Barcamp.005.png";
-            images[5] = "Jekyll-Barcamp_files/Jekyll-Barcamp.006.png";
-            images[6] = "Jekyll-Barcamp_files/Jekyll-Barcamp.007.png";
-            images[7] = "Jekyll-Barcamp_files/Jekyll-Barcamp.008.png";
-            images[8] = "Jekyll-Barcamp_files/Jekyll-Barcamp.009.png";
-            images[9] = "Jekyll-Barcamp_files/Jekyll-Barcamp.010.png";
-            images[10] = "Jekyll-Barcamp_files/Jekyll-Barcamp.011.png";
-            images[11] = "Jekyll-Barcamp_files/Jekyll-Barcamp.012.png";
-            images[12] = "Jekyll-Barcamp_files/Jekyll-Barcamp.013.png";
-            images[13] = "Jekyll-Barcamp_files/Jekyll-Barcamp.014.png";
-            images[14] = "Jekyll-Barcamp_files/Jekyll-Barcamp.015.png";
-            images[15] = "Jekyll-Barcamp_files/Jekyll-Barcamp.016.png";
-            images[16] = "Jekyll-Barcamp_files/Jekyll-Barcamp.017.png";
-            var index = 0;
-            function WindowLoaded(evt)
-            {
-                document.body.onselectstart = function () { return false; };
-            }
-            function Step(i)
-            {
-                GoTo(index + i)
-            }
-            function GoTo(newIndex)
-            {
-                if(newIndex >= 0 && newIndex < images.length)
-                {
-                    index = newIndex;
-                    document.Slideshow.src = images[index];
-                }
-            }
-//      ]]>
-    </script>
-</head>
-<body bgcolor="black" onload='WindowLoaded(event);'>
-    <p align="center">
-        <br/>
-        <br/>
-        <img name="Slideshow" alt="" src="Jekyll-Barcamp_files/Jekyll-Barcamp.001.png" onclick="Step(1)"/>
-    </p>
-</body>
-</html>
