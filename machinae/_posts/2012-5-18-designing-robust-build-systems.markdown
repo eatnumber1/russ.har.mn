@@ -2,6 +2,7 @@
 layout: post
 title: Designing Robust Build Systems
 excerpt: A correct build system must be able to solve the problem of traversal-time dependency detection.
+keywords: [programming, build systems, make]
 ---
 
 A few years ago, I took a hard look at the current state of the art of build

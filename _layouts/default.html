@@ -33,8 +33,8 @@
 	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
 	{% endfor %}
 
-	{% if page.categories and page.categories != empty %}
-	<meta name="keywords" content="{{ page.categories | join:',' }}"/>
+	{% if page.keywords and page.keywords != empty %}
+	<meta name="keywords" content="{{ page.keywords | join:',' }}"/>
 	{% endif %}
 
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endif %}"/>

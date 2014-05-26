@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Determining Mount Status
+keywords: [scripting]
 ---
 
 I've fairly frequently ran into the issue while scripting a mount action of

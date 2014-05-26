@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reclaimable Userspace Cache Memory
-categories: [programming]
+keywords: [programming]
 ---
 
 Caches are used all over your computer and for a huge variety of purposes. From

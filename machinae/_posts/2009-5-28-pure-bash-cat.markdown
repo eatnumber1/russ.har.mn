@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pure Bash Cat
-categories: [programming, bash]
+keywords: [programming, bash]
 ---
 
 So just to see if I could, I wrote a version of cat using pure bash. Pure bash

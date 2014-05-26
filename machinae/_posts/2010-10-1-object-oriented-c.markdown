@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Object Oriented C
-categories: [programming, c]
+keywords: [programming, c]
 ---
 
 So, thanks to [blocks](http://thirdcog.eu/pwcblocks/), Apple's new extension to

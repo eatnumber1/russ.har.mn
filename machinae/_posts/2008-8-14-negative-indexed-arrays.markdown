@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Negative Indexed Arrays
-categories: [programming, c++]
+keywords: [programming, c++]
 ---
 
 In first describing how ridiculous C and C++ was to my class when I was in my

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll at Barcamp
-categories: [jekyll, web, barcamp]
+keywords: [jekyll, web, barcamp]
 ---
 
 This is an example post I've made for my presentation at
