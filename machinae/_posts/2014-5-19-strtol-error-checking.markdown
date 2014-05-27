@@ -35,7 +35,7 @@ malloc(atoi(uintmax_plus_one));
 {% endhighlight %}
 
 Now we're allocating far less memory than we expected. This problem can quickly become the source
-of an [integer overflow][integer-overflow].
+of an [integer overflow][integer-overflow] vulnerability.
 
 ## Enter strtol!
 
