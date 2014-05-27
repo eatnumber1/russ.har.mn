@@ -123,29 +123,13 @@ if (errno == ERANGE) {
 
 And now we've turned a relatively simple one-line call to `atoi` into twenty lines of code. [FML]
 
-## Enter strton
+## Enter strtonum
 
-I've written a [wrapper][strton] to the `strtol` family that helps with this case called `strton`
-(short for "string to number"). Use at your own risk. Here's the big semantic differences between it
-and `strtol`:
-
-* `strton` assumes that you want to convert the entire string, so it is an error if the entire
-  string cannot be converted.
-* `strton` returns a boolean to tell you if it has failed.
-* `strton` can convert to any of the integral types in the C language, from `char` all the way to
-  `long long`, and it wouldn't be hard to add the floating point types.
-
-This lets you end up with a much shorter number conversion:
-
-{% highlight c %}
-const char *str = "4096";
-short int val;
-if (!strton(str, 10, &val, STRTON_SHORT, 0)) {
-	// An error has occurred. errno tells us what happened.
-}
-{% endhighlight %}
-
-Now wasn't that easy :)
+The great folks over at [OpenBSD] have made a nice replacement for `strtol` which fixes all of the
+issues discussed. Called [strtonum], the function doesn't allow trailing characters and makes it
+easy to determine if a range error has occurred. The one drawback is that `strtonum` is an OpenBSD
+extension, and so is not found in any standard. If you want to use `strtonum` on other platforms,
+you can grab the source [here][strtonum-src]
 
 [^strtol-and-friends]: `strtol`, short for "string to long" is only one of a few of such functions
 	for converting from a string to a number. Also in this family are [strtoimax][strtol],
@@ -157,7 +141,9 @@ Now wasn't that easy :)
 [integer-overflow]: https://www.owasp.org/index.php/Integer_overflow "Integer overflow"
 [POSIX]: http://pubs.opengroup.org/onlinepubs/9699919799/functions/errno.html "errno - error return value"
 [FML]: http://www.fmylife.com "Fuck my Life"
-[strton]: https://github.com/eatnumber1/rehlib/blob/master/src/strton.c
+[strtonum]: http://www.openbsd.org/cgi-bin/man.cgi?query=strtonum "strtonum - reliably convert string value to an integer"
+[OpenBSD]: http://openbsd.org/
+[strtonum-src]: http://anoncvs.estpak.ee/cgi-bin/cgit/openbsd-src/tree/lib/libc/stdlib/strtonum.c
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4 tw=100 noet
