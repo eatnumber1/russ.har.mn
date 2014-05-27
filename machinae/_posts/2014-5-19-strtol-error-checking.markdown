@@ -129,7 +129,7 @@ The great folks over at [OpenBSD] have made a nice replacement for `strtol` whic
 issues discussed. Called [strtonum], the function doesn't allow trailing characters and makes it
 easy to determine if a range error has occurred. The one drawback is that `strtonum` is an OpenBSD
 extension, and so is not found in any standard. If you want to use `strtonum` on other platforms,
-you can grab the source [here][strtonum-src]
+you can grab the source [here][strtonum-src].
 
 [^strtol-and-friends]: `strtol`, short for "string to long" is only one of a few of such functions
 	for converting from a string to a number. Also in this family are [strtoimax][strtol],
