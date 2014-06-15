@@ -1,18 +1,16 @@
 ---
 layout: post
-title: Function-like Macros are Hard
+title: The MIN Challenge
 excerpt: It's surprisingly difficult to make a proper function-like macro.
 keywords: [programming, c, preprocessor, cpp, macros]
 ---
 
-# Function-like Macros are Hard
+# The MIN Challenge
 
 It's surprisingly difficult to make a proper function-like macro. You'd think that it's as simple as
 putting your code all on one line in the macro's body, but there's a great deal of considerations
 that may not have occurred to you, and in the end it's not even possible to do in the general case
 without relying on non-standard extensions to C.
-
-# The MIN Macro Challenge
 
 An old challenge that I've heard used to illustrate these difficulties goes as follows:
 
