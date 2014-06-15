@@ -4,16 +4,28 @@ title: "Bash Scripters: Stop using subshells to call functions."
 keywords: [programming, bash]
 ---
 
-When writing in bash, zsh, sh, etc... __stop__ using subshells to call functions.
-There is a significant speed overhead to using a subshell and there is a much
-better alternative. Instead, you should just have a convention where a
-particular variable is always the return value of the function (I use _retval_).
-This has the added benefit of also allowing you to return arrays from your
-functions.
+When writing shell scripts, it's almost always better to call a function
+directly rather than using a subshell to call the function. The usual convention
+that I've seen is to echo the return value of the function and capture that
+output using a subshell. For example:
 
-If you don't know what a subshell is,  a subshell is another bash shell which is
-spawned whenever you use `$()` or ```` ` ` ```` and is used to execute the code
-you put inside.
+{% highlight bash %}
+#!/bin/bash
+function get_path() {
+    echo "/path/to/something"
+}
+mypath="$(get_path)"
+{% endhighlight %}
+
+This works fine, but there is a significant speed overhead to using a subshell
+and there is a much faster alternative. Instead, you can just have a convention
+wherein a particular variable is always the return value of the function (I use
+_retval_).  This has the added benefit of also allowing you to return arrays
+from your functions.
+
+If you don't know what a subshell is, for the purposes of this blog post a
+subshell is another bash shell which is spawned whenever you use `$()`
+or ```` ` ` ```` and is used to execute the code you put inside.
 
 I did some simple testing to allow you to observe the overhead. For two
 functionally equivalent scripts:
