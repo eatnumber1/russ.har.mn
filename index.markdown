@@ -16,9 +16,17 @@ includes:
 Welcome
 =======
 
-I'm Russ Harmon, a <span id="age">twenty five or so</span> year old programmer
+I'm Russ Harmon, a <span id="age">twenty seven or so</span> year old programmer
 currently located in San Francisco, CA.  What you see below is some ramblings by
 me about myself or other things.
+
+<script type="text/javascript">
+  $("#age").replaceWith(
+    new Number(
+        Math.floor(
+          (new Date() - new Date("{{ site.birthdate }}"))
+            / 31556926000 /* nanos per year */)).toWords());
+</script>
 
 <div class="section">
 # Academics
