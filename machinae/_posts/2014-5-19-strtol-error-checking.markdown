@@ -134,15 +134,15 @@ you can grab the source [here][strtonum-src].
 	for converting from a string to a number. Also in this family are [strtoimax][strtol],
 	[strtoll][strtol] and [strtoq][strtol].
 
-[atoi]: http://man7.org/linux/man-pages/man3/atoi.3.html "atoi(3)"
-[strtol]: http://man7.org/linux/man-pages/man3/strtol.3.html "strtol(3)"
-[atoi-discouraged]: http://pubs.opengroup.org/onlinepubs/9699919799/functions/atoi.html#tag_16_30_07 "atoi - APPLICATION USAGE"
+[atoi]: https://man7.org/linux/man-pages/man3/atoi.3.html "atoi(3)"
+[strtol]: https://man7.org/linux/man-pages/man3/strtol.3.html "strtol(3)"
+[atoi-discouraged]: https://pubs.opengroup.org/onlinepubs/9699919799/functions/atoi.html#tag_16_30_07 "atoi - APPLICATION USAGE"
 [integer-overflow]: https://www.owasp.org/index.php/Integer_overflow "Integer overflow"
-[POSIX]: http://pubs.opengroup.org/onlinepubs/9699919799/functions/errno.html "errno - error return value"
-[FML]: http://www.fmylife.com "Fuck my Life"
-[strtonum]: http://www.openbsd.org/cgi-bin/man.cgi?query=strtonum "strtonum - reliably convert string value to an integer"
-[OpenBSD]: http://openbsd.org/
-[strtonum-src]: http://anoncvs.estpak.ee/cgi-bin/cgit/openbsd-src/tree/lib/libc/stdlib/strtonum.c
+[POSIX]: https://pubs.opengroup.org/onlinepubs/9699919799/functions/errno.html "errno - error return value"
+[FML]: https://www.fmylife.com "Fuck my Life"
+[strtonum]: https://www.openbsd.org/cgi-bin/man.cgi?query=strtonum "strtonum - reliably convert string value to an integer"
+[OpenBSD]: https://openbsd.org/
+[strtonum-src]: https://anoncvs.estpak.ee/cgi-bin/cgit/openbsd-src/tree/lib/libc/stdlib/strtonum.c
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4 tw=100 noet

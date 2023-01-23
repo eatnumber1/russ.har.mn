@@ -32,7 +32,7 @@ line to explain what this is doing.
 {% highlight bash %}
 #!/bin/bash
 {% endhighlight %}
-Line 1 is the [shebang](http://en.wikipedia.org/wiki/Shebang_%28Unix%29)
+Line 1 is the [shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 
 {% highlight bash %}
 INPUTS=( "${@:-"-"}" )
@@ -41,7 +41,7 @@ Line 2 assigns the array variable INPUTS either the arguments provided on the
 command line if they exist, or the single character `-`. The way this happens is
 as follows: `$@` is the variable to reference the _positional parameters_ (the
 arguments to your program). If you have not heard of `$*`, read
-[this](http://bash-hackers.org/wiki/doku.php/scripting/posparams#mass_usage).
+[this](https://bash-hackers.org/wiki/doku.php/scripting/posparams#mass_usage).
 The way I reference the positional parameters is like `${@}`. That's because the
 brackets allow me to add a _default value_ to the variable. A _default value_ is
 the value that the variable will seem to have if the variable is not set. The

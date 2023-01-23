@@ -261,6 +261,7 @@ DEPENDENCIES
   jekyll-feed (= 0.15.1)
   jekyll-gist (= 1.5.0)
   jekyll-github-metadata (= 2.13.0)
+  jekyll-mentions (= 1.6.0)
   jekyll-optional-front-matter (= 0.3.2)
   jekyll-paginate (= 1.1.0)
   jekyll-readme-index (= 0.3.0)
@@ -269,7 +270,6 @@ DEPENDENCIES
   jekyll-sitemap (= 1.4.0)
   jekyll-titles-from-headings (= 0.5.3)
   kramdown-parser-gfm
-  minima (~> 2.0)
   netrc (~> 0.11.0)
   tzinfo (~> 1.2)
   tzinfo-data

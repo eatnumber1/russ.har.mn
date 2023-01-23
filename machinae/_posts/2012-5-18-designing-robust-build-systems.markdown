@@ -75,13 +75,12 @@ also gave a presentation on the Nethack build system which can be seen
 [cmake]: http://dev/null
 [jam]: http://dev/null
 
-[clockfort]: https://clockfort.com/
-[nethack]: http://www.nethack.org/
-[recursive-make]: http://aegis.sourceforge.net/auug97.pdf
-[gcc-M]: http://gcc.gnu.org/onlinedocs/cpp/Invocation.html#index-M-141
-[gnumake-include]: http://www.gnu.org/software/make/manual/html_node/Remaking-Makefiles.html#Remaking-Makefiles
+[nethack]: https://www.nethack.org/
+[recursive-make]: https://aegis.sourceforge.net/auug97.pdf
+[gcc-M]: https://gcc.gnu.org/onlinedocs/cpp/Invocation.html#index-M-141
+[gnumake-include]: https://www.gnu.org/software/make/manual/html_node/Remaking-Makefiles.html#Remaking-Makefiles
 [nh-deps]: /files/nethack-dependencies.pdf
-[nh-prezi]: http://prezi.com/vzxavg014qlf/nethack-compilation/
+[nh-prezi]: https://prezi.com/vzxavg014qlf/nethack-compilation/
 [bingehack]: https://github.com/ComputerScienceHouse/bingehack
 
 {% include definitions.markdown %}

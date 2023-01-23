@@ -19,10 +19,10 @@ the following URL:
 This is an undocumented API by Google, and notably cannot use JSONP. That
 means that I couldn't use that URL directly from within my static-page
 Jekyll-generated website thanks to the
-[same origin policy](http://en.wikipedia.org/wiki/Same-origin_policy).
+[same origin policy](https://en.wikipedia.org/wiki/Same-origin_policy).
 
 In order to work around this rather severe limitation, I leveraged the power of
-[YQL](http://en.wikipedia.org/wiki/Yahoo!_query_language), which is able to
+[YQL](https://en.wikipedia.org/wiki/Yahoo!_query_language), which is able to
 effectively turn a JSON-only data source into a JSONP data source. At the end of
 the day, I'm able to retrieve my current location from Latitude by going through
 Yahoo with the following code:

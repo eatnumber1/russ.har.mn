@@ -3,12 +3,12 @@ title: Object Oriented C
 keywords: [programming, c]
 ---
 
-So, thanks to [blocks](http://thirdcog.eu/pwcblocks/), Apple's new extension to
+So, thanks to [blocks](https://thirdcog.eu/pwcblocks/), Apple's new extension to
 C, you can now do basic object-orientation. Have a look over at
-[GitHub](http://gist.github.com/605457) for a short example on how to do it.
+[GitHub](https://gist.github.com/605457) for a short example on how to do it.
 
 To break it down, an object is a struct, which contains both fields and
-[blocks](http://thirdcog.eu/pwcblocks/) which act as the object's methods.
+[blocks](https://thirdcog.eu/pwcblocks/) which act as the object's methods.
 
 {% highlight c %}
 typedef struct {

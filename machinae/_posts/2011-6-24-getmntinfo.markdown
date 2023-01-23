@@ -53,9 +53,9 @@ else
 fi
 {% endhighlight %}
 
-[getmntinfo]:http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/getmntinfo.3.html
-[getmntent]:http://linux.die.net/man/3/getmntent
-[github]:http://github.com/eatnumber1/getmntinfo
+[getmntinfo]:https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/getmntinfo.3.html
+[getmntent]:https://linux.die.net/man/3/getmntent
+[github]:https://github.com/eatnumber1/getmntinfo
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet

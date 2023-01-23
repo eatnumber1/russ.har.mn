@@ -4,6 +4,7 @@ plugins:
   - jekyll-avatar
   - jekyll-seo-tag
   - jekyll-coffeescript
+  - jekyll-mentions
   # These plugins are always enabled in gh pages regardless of use.
   - jekyll-default-layout
   - jekyll-gist

@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", versions['jekyll-sitemap']
   gem "jekyll-titles-from-headings", versions['jekyll-titles-from-headings']
   gem "jekyll-seo-tag", versions['jekyll-seo-tag']
+  gem "jekyll-mentions", versions['jekyll-mentions']
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

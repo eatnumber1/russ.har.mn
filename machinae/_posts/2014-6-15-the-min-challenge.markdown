@@ -204,10 +204,10 @@ that a normal function can (but you still can't take the address of it).
 
 [^1]: Note that `printf` returns the number of characters printed.
 
-[ternary-op]: http://en.wikipedia.org/wiki/%3F: "Ternary Operation"
-[comma-oper]: http://en.wikipedia.org/wiki/Comma_operator "Comma Operator"
-[stmt-vs-expr]: http://lambda-the-ultimate.org/node/1044 "Expressions vs Statements"
-[c-oper-precedence]: http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Operator_precedence "C Operator Precedence"
+[ternary-op]: https://en.wikipedia.org/wiki/%3F: "Ternary Operation"
+[comma-oper]: https://en.wikipedia.org/wiki/Comma_operator "Comma Operator"
+[stmt-vs-expr]: https://lambda-the-ultimate.org/node/1044 "Expressions vs Statements"
+[c-oper-precedence]: https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Operator_precedence "C Operator Precedence"
 [GNUC]: https://gcc.gnu.org/onlinedocs/gcc/C-Extensions.html "Extensions to the C Language Family"
 [stmt-exprs]: https://gcc.gnu.org/onlinedocs/gcc/Statement-Exprs.html#Statement-Exprs "Statements and Declarations in Expressions"
 [typeof]: https://gcc.gnu.org/onlinedocs/gcc/Typeof.html#Typeof "Typeof"

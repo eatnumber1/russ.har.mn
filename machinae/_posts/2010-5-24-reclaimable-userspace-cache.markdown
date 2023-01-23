@@ -13,7 +13,7 @@ regenerated, and there is no way for the operating system to reclaim that memory
 when it really needs it.
 
 In Java, that's not the case. In Java, you can create
-[SoftReference](http://java.sun.com/javase/6/docs/api/java/lang/ref/SoftReference.html)
+[SoftReference](https://java.sun.com/javase/6/docs/api/java/lang/ref/SoftReference.html)
 objects which are collected by the garbage collector when the VM is running out
 of memory. This exact idea is what I'd like to see in an operating system.
 
@@ -43,11 +43,10 @@ was taken from, and give it to someone else.
 Before simply giving a chunk of memory to someone else however, the kernel has
 to check to see if the memory is in use. In order to do that, there has to be a
 lock bit somewhere. I had originally thought to put it in the kernel's memory,
-but [Clockfort](http://www.clockfort.com) noted that locking and unlocking would
-require a system call, which would be quite slow. Therefore, the bit can be kept
-in the processes memory space, and simply read by the kernel before reclaiming
-memory. That way, reclock and recunlock can be implemented entirely without
-syscalls.
+but @clockfort noted that locking and unlocking would require a system call,
+which would be quite slow. Therefore, the bit can be kept in the processes
+memory space, and simply read by the kernel before reclaiming memory. That way,
+reclock and recunlock can be implemented entirely without syscalls.
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4 tw=80 noet
