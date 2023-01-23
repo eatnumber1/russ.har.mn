@@ -42,13 +42,5 @@ disqus_shortname: eatnumber1
 #disqus_developer: 1
 google_analytics_id: UA-10349264-2
 
-# TODO fix this
-github_username: eatnumber1
-github_excludes:
-  - eatnumber1.github.com
-  - oh-my-zsh
-  - dotfiles
-  - resume
-
 # This file cannot use tab characters.
 # vim: et ts=2 sw=2 sts=2
