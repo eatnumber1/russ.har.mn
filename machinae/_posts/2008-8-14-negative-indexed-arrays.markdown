@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Negative Indexed Arrays
 keywords: [programming, c++]
 ---

@@ -25,20 +25,6 @@
 	<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.type %} type="{{ link.type }}"{% endif %}/>
 	{% endfor %}
 
-	{% for meta in site.meta %}
-	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
-	{% endfor %}
-
-	{% for meta in page.meta %}
-	<meta name="{{ meta.name }}" content="{{ meta.content }}"/>
-	{% endfor %}
-
-	{% if page.keywords and page.keywords != empty %}
-	<meta name="keywords" content="{{ page.keywords | join:',' }}"/>
-	{% endif %}
-
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endif %}"/>
-
 	{% for incl in page.includes %}
 		{% capture incl_fn %}{{ incl }}.html{% endcapture %}
 		{% include {{ incl_fn }} %}
@@ -46,8 +32,10 @@
 
 	{% comment %}Hopefully a good guess of if the site is published.{% endcomment %}
 	{% if site.safe %}
-	<base href="http://{{ site.domain }}" target="_self"/>
+	<base href="{{ site.url }}" target="_self"/>
 	{% endif %}
+
+	{% seo %}
 </head>
 <body id="{{ page.section }}">
 	<div id="site">
@@ -86,5 +74,5 @@
 </html>
 
 {% comment %}
-vim: ft=liquid sw=4 ts=4 sts=4
+vim: ft=liquid noet sw=2 ts=2 sts=2
 {% endcomment %}

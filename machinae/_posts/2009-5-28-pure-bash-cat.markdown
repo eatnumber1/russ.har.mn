@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pure Bash Cat
 keywords: [programming, bash]
 ---

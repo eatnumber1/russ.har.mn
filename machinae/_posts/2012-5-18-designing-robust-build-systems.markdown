@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Designing Robust Build Systems
 excerpt: A correct build system must be able to solve the problem of traversal-time dependency detection.
 keywords: [programming, build systems, make]
@@ -19,23 +18,7 @@ fully understand the _dependency tree_ of the software.  This dependency tree
 is, composed in part by any `#include` directives in your C files. For example,
 lets say we're making a simple game, with a dependency tree like the following:
 
-<!-- TODO: Don't use <center> -->
-<center>
-{% graphviz %}
-digraph example1 {
-	rankdir = "LR";
-
-	common_h [label = "common.h"];
-	player_h [label = "player.h"];
-	game_c [label = "game.c"];
-	game_exe [label = "game.exe"];
-
-	common_h -> game_c;
-	player_h -> game_c;
-	game_c -> game_exe;
-}
-{% endgraphviz %}
-</center>
+![example](/images/2012-5-18-designing-robust-build-systems-example1.svg){: .centerImage }
 
 This means that before `game.c` can be built, `common.h` and `player.h` must
 exist, and before `game.exe` can be built, `game.c` must exist. Additionally,
@@ -47,29 +30,7 @@ domain-specific language to express the levels. This DSL's compiler would output
 C code, which would then be used from within your code. This can be expressed
 like so:
 
-<center>
-{% graphviz %}
-digraph example2 {
-	common_h [label = "common.h"];
-	player_h [label = "player.h"];
-	game_c [label = "game.c"];
-	game_exe [label = "game.exe"];
-
-	levcomp_c [label = "level_compiler.c"];
-	levcomp [label = "level_compiler.exe"];
-	levels_c [label = "levels.c"];
-
-	common_h -> levcomp_c -> levcomp -> levels_c;
-	player_h -> levels_c [style = "dashed"];
-	common_h -> levels_c [style = "dashed"];
-	levels_c -> game_exe;
-
-	common_h -> game_c;
-	player_h -> game_c;
-	game_c -> game_exe;
-}
-{% endgraphviz %}
-</center>
+![example](/images/2012-5-18-designing-robust-build-systems-example2.svg){: .centerImage }
 
 The dependencies `common.h → levels.c` and `player.h → levels.c` is not
 detected in this case unless you explicitly write that dependency into your
@@ -102,25 +63,7 @@ _traversal-time dependency detection_ problem, which our game suffered from.
 Unfortunately, this works only for a single "level" of traversal-time dependency
 detection. E.g. the following does not work:
 
-<center>
-{% graphviz %}
-digraph example3 {
-	//rankdir = "LR";
-
-	a_c [label = "a.c"];
-	a_exe [label = "a.exe"];
-	b_c [label = "b.c"];
-	b_exe [label = "b.exe"];
-
-	c_h [label = "c.h"];
-	c_c [label = "c.c"];
-	c_exe [label = "c.exe"];
-
-	a_c -> a_exe -> b_c -> b_exe -> c_c -> c_exe;
-	c_h -> c_c;
-}
-{% endgraphviz %}
-</center>
+![example](/images/2012-5-18-designing-robust-build-systems-example3.svg){: .centerImage }
 
 I've built a functional build system for Nethack which leverages these concepts.
 You can see an abbreviated dependency graph for Nethack [here][nh-deps], and I

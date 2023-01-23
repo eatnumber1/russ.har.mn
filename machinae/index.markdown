@@ -1,5 +1,5 @@
 ---
-layout: machinae-main
+layout: machinae-page
 title: Home
 section: Home
 

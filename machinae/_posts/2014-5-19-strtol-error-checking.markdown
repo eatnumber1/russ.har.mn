@@ -1,5 +1,4 @@
 ---
-layout: post
 title: String to Number Conversion in C Takes its Toll
 excerpt: Converting a string to a number in C is no simple affair.
 keywords: [programming, c, strtol, string conversion]

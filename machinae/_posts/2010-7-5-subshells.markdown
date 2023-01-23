@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Bash Scripters: Stop using subshells to call functions."
 keywords: [programming, bash]
 ---

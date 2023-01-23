@@ -1,0 +1,12 @@
+digraph example1 {
+	rankdir = "LR";
+
+	common_h [label = "common.h"];
+	player_h [label = "player.h"];
+	game_c [label = "game.c"];
+	game_exe [label = "game.exe"];
+
+	common_h -> game_c;
+	player_h -> game_c;
+	game_c -> game_exe;
+}

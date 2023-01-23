@@ -1,1 +1,0 @@
-_jquery-timeago/jquery.timeago.js

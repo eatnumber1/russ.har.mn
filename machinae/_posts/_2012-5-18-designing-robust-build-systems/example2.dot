@@ -1,0 +1,19 @@
+digraph example2 {
+	common_h [label = "common.h"];
+	player_h [label = "player.h"];
+	game_c [label = "game.c"];
+	game_exe [label = "game.exe"];
+
+	levcomp_c [label = "level_compiler.c"];
+	levcomp [label = "level_compiler.exe"];
+	levels_c [label = "levels.c"];
+
+	common_h -> levcomp_c -> levcomp -> levels_c;
+	player_h -> levels_c [style = "dashed"];
+	common_h -> levels_c [style = "dashed"];
+	levels_c -> game_exe;
+
+	common_h -> game_c;
+	player_h -> game_c;
+	game_c -> game_exe;
+}

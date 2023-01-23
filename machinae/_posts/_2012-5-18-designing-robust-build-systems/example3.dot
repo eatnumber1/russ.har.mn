@@ -1,0 +1,15 @@
+digraph example3 {
+	//rankdir = "LR";
+
+	a_c [label = "a.c"];
+	a_exe [label = "a.exe"];
+	b_c [label = "b.c"];
+	b_exe [label = "b.exe"];
+
+	c_h [label = "c.h"];
+	c_c [label = "c.c"];
+	c_exe [label = "c.exe"];
+
+	a_c -> a_exe -> b_c -> b_exe -> c_c -> c_exe;
+	c_h -> c_c;
+}

@@ -1,18 +1,53 @@
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-avatar
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+  # These plugins are always enabled in gh pages regardless of use.
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+
+# These options are used by plugins or jekyll
 highlighter: pygments
 permalink: /blog/:year-:month-:day/:title
+feed:
+  path: /machinae/atom.xml
 
-domain: rus.har.mn
-description: The personal website and blog of Russell Harmon
-#disqus_developer: 1
+title: Machinae Elegantiam
+author: Russell Harmon
+twitter:
+  username: eatnumber1
+  card: summary
+social:
+  name: Russell Harmon
+  links:
+    - https://twitter.com/eatnumber1
+    - https://facebook.com/eatnumber1
+    - https://linkedin.com/in/eatnumber1
+    - https://github.com/eatnumber1
+webmaster_verifications:
+  google: "_TqeRPv20bKl_iDmqWzCDRwPBsay97cDnBsqX-vsykQ"
+
+# These options are used in the site body
 birthdate: August 9, 1988
 disqus_shortname: eatnumber1
+#disqus_developer: 1
 google_analytics_id: UA-10349264-2
-google_plus_id: 112862864127564162879
-sitemap_exclude: /test/
 
+# TODO fix this
 github_username: eatnumber1
 github_excludes:
-    - eatnumber1.github.com
-    - oh-my-zsh
-    - dotfiles
-    - resume
+  - eatnumber1.github.com
+  - oh-my-zsh
+  - dotfiles
+  - resume
+
+# This file cannot use tab characters.
+# vim: et ts=2 sw=2 sts=2

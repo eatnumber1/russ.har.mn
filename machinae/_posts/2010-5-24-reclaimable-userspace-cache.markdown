@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Reclaimable Userspace Cache Memory
 keywords: [programming]
 ---

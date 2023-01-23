@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Object Oriented C
 keywords: [programming, c]
 ---

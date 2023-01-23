@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /test/
 
-Sitemap: http://rus.har.mn/sitemap.xml
+Sitemap: http://russ.har.mn/sitemap.xml

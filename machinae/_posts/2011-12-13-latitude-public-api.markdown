@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Getting Public Information From Latitude
 excerpt: Getting public information about a person from Latitude is no simple task. Google has no public API for retrieving non-authenticated information about a person.
 ---

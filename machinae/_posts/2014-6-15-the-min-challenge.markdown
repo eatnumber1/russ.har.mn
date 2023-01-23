@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The MIN Challenge
 excerpt: It's surprisingly difficult to make a proper function-like macro.
 keywords: [programming, c, preprocessor, cpp, macros]

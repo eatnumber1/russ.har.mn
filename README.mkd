@@ -1,9 +1,0 @@
-This is the sources for my personal website.
-
-There are two repositories for this website: [rus.har.mn][rhm], and
-[eatnumber1.github.com][egc].  eatnumber1.github.com is the Jekyll generated
-sources for the website generated from rus.har.mn. It is done this way to allow
-for the use of Jekyll plug ins.
-
-[rhm]: https://github.com/eatnumber1/rus.har.mn
-[egc]: https://github.com/eatnumber1/eatnumber1.github.com
