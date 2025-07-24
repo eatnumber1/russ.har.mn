@@ -2,22 +2,20 @@
 title: I Just Wanted a RAID Array
 excerpt: How I went from `mdadm --create` to contributing to the Linux kernel.
 keywords: [linux, md, mdadm, raid, dm-integrity]
-published: false
 ---
 
 # I Just Wanted a RAID Array
 
 This is a story about how I went from "just" wanting to create a RAID array, something [very well
-documented](https://raid.wiki.kernel.org/index.php/RAID_setup) and done for decades by... presumably
-everyone who runs a storage server, myself included... to contributing to Systemd and the Linux
-kernel.
+documented][raid-setup-wikipedia] and done for decades by... presumably everyone who runs a storage
+server, myself included... to contributing to Systemd and the Linux kernel.
 
 I'm also not kidding that almost everyone who runs a storage server has done this. A [simple Google
-search](https://www.google.com/search?q=create+a+raid+array+linux) indicates that besides the Linux
-wiki, there's also documentation on how to do this from RedHat, Ubuntu, Debian, Arch, Alpine,
-Gentoo, Digital Ocean, Oracle, Suse, Alibaba, and even Amazon. It's an exaggeration, but I don't
-think it's too much of an exaggeration to say that Linux software RAID via `mdadm` is the most
-widely deployed storage solution in the world.
+search][google-create-raid-array] indicates that besides the Linux wiki, there's also documentation
+on how to do this from RedHat, Ubuntu, Debian, Arch, Alpine, Gentoo, Digital Ocean, Oracle, Suse,
+Alibaba, and even Amazon. It's an exaggeration, but I don't think it's too much of an exaggeration
+to say that Linux software RAID via `mdadm` is the most widely deployed storage solution in the
+world.
 
 ## The RAID5 Write Hole
 
@@ -25,10 +23,9 @@ Given what I just said above, it may surprise you to lose that Linux's software 
 data.
 
 It *probably* won't, in the same way that unplugging a FAT32 USB stick from your computer when
-Windows ([before
-10](https://learn.microsoft.com/en-us/windows/client-management/client-tools/change-default-removal-policy-external-storage-media))
-which has been doing write-behind caching won't... and by that I mean just don't unsafe power-off
-your computer and you'll be fine. But who does that? Well... I do. I get power outages sometimes.
+Windows ([before 10][win10-default-removal-policy]) which has been doing write-behind caching
+won't... and by that I mean just don't unsafe power-off your computer and you'll be fine. But who
+does that? Well... I do. I get power outages sometimes.
 
 Ok let's dig deeper. What's the problem here?
 
@@ -61,15 +58,13 @@ data is correct. I'd always just assumed that this is how RAID6 worked... oh how
 
 ## The RAID6 Write Hole & Man Pages
 
-It's taken a long time, but I've learned to read... basically every [man
-page](https://en.wikipedia.org/wiki/Man_page) I come across. I highly recommend you do the same; my
-understanding on how Linux *actually* works got 1000x better once I started doing that. So unlike
-the last time I created a RAID array, I decided not to follow a tutorial, and instead read the
-"real" documentation.
+It's taken a long time, but I've learned to read... basically every [man page] I come across. I
+highly recommend you do the same; my understanding on how Linux *actually* works got 1000x better
+once I started doing that. So unlike the last time I created a RAID array, I decided not to follow a
+tutorial, and instead read the "real" documentation.
 
-There's [mdadm(8)](https://man7.org/linux/man-pages/man8/mdadm.8.html), which is great
-documentation... for the administrative frontend to the
-[md(4)](https://man7.org/linux/man-pages/man4/md.4.html) subsystem in the kernel.
+There's [mdadm(8)], which is great documentation... for the administrative frontend to the [md(4)]
+subsystem in the kernel.
 
 Aside, "md" is a terrible name for a kernel subsystem. It's impossible to search for, and even more
 impossible to discover organically. I found it via the "SEE ALSO" section of mdadm(8).
@@ -95,23 +90,20 @@ However there's another option too.
 ## Silent Data Corruption
 
 Modern hard drives do their own internal form of error detection and correction called [Forward
-Error Correction](https://en.wikipedia.org/wiki/Error_correction_code#Forward_error_correction)
-(FEC).  When an error occurs and is detectable (it's possible, albeit unlikely, that corruption of
-data in exactly the right way to still pass the error check happens), drives will first try to
-recover the correct data by reading that part of the drive many many times, and failing that will
-return an error to the kernel. As long as this always works, on a read RAID will see this as an
-error and reconstruct the missing data, thereby not returning bad data to the caller.
+Error Correction][FEC] (FEC). When an error occurs and is detectable (it's possible, albeit
+unlikely, that corruption of data in exactly the right way to still pass the error check happens),
+drives will first try to recover the correct data by reading that part of the drive many many times,
+and failing that will return an error to the kernel. As long as this always works, on a read RAID
+will see this as an error and reconstruct the missing data, thereby not returning bad data to the
+caller.
 
 I use lots of hand-me-down hard drives though, so I don't trust those drives even a little bit.
 Error rates are high, and although the chance of undetectable corruption is small, I roll the dice
 often enough that I expect it to happen... and when it happens, RAID won't fix it (even if I deploy
 the write-hole fixes, it still won't fix this).
 
-There's another way. [lvmraid(7)](https://man7.org/linux/man-pages/man7/lvmraid.7.html) has a "DATA
-INTEGRITY" section discussing combining
-[dm-raid](https://docs.kernel.org/admin-guide/device-mapper/dm-raid.html) (which is just a bridge
-from [Device Mapper](https://docs.kernel.org/admin-guide/device-mapper/index.html) to md(4)) with
-the [dm-integrity](https://docs.kernel.org/admin-guide/device-mapper/dm-integrity.html) target.
+There's another way. [lvmraid(7)] has a "DATA INTEGRITY" section discussing combining [dm-raid]
+(which is just a bridge from [Device Mapper] to md(4)) with the [dm-integrity] target.
 
 DM Integrity is interesting. It places checksums of data written *inline* with the data, and checks
 them when you read the data. If it sees a checksum failure, it fails the read.
@@ -147,9 +139,8 @@ Anyway, back to disabling journaling.
 ## Disabling the Journal in dm-integrity
 
 First off, this is not supported *at all* by lvmraid(7), so in order to do this we have to stop
-using LVM entirely (at least at this level). So to do this "by hand" we'll pull out
-[dmsetup(8)](https://man7.org/linux/man-pages/man8/dmsetup.8.html) and
-[integritysetup(8)](https://man7.org/linux/man-pages/man8/integritysetup.8.html).
+using LVM entirely (at least at this level). So to do this "by hand" we'll pull out [dmsetup(8)] and
+[integritysetup(8)].
 
 integritysetup has a `--integrity-no-journal` option that you can use when opening an integrity
 device. Great, that makes this easy to test with.
@@ -157,17 +148,14 @@ device. Great, that makes this easy to test with.
 How do we set this up to work at boot?
 
 Oh this is a mess. Because dm-integrity was originally intended for use with LUKS (full-disk
-encryption), there's [not enough
-information](https://github.com/systemd/systemd/issues/7757#issuecomment-822867467) in a standalone
+encryption), there's [not enough information][dm-integrity-standalone-incomplete] in a standalone
 dm-integrity superblock to open it automatically. Because of this, the Systemd folks introduced an
-[systemd-integritysetup@.service(8)](https://man7.org/linux/man-pages/man8/systemd-integritysetup@.service.8.html)
-which reads the needed additional information from
-[integritytab(5)](https://man7.org/linux/man-pages/man5/integritytab.5.html), and it was introduced
-after the version in my Ubuntu machine. Great.
+[systemd-integritysetup@.service(8)] which reads the needed additional information from
+[integritytab(5)], and it was introduced after the version in my Ubuntu machine. Great.
 
 After backporting `systemd-integritysetup@.service` to Ubuntu Jammy I discover that there's no way
 to pass the `--integrity-no-journal` option via `/etc/integritytab`. So [I added
-it](https://github.com/systemd/systemd/pull/27824).
+it][integritytab-no-journal] and someone else immediately [improved it][integritytab-journal-mode].
 
 Also, because of this lack of superblock information, there's no room for UUIDs, labels, etc. So
 without additional work the only way to configure integritytab is with the `/dev/sd*` device names.
@@ -195,8 +183,8 @@ In particular, I'm looking to configure the dm-integrity target so that for my e
 (large-ish media files on RAID), we're most likely to be passing over a metadata area during reads
 and writes, thereby avoiding seeks.
 
-TODO link to patch
-I've sent a patch to the kernel documentation with my findings, but the relevant ones are:
+I've sent a patch to the kernel documentation with my findings (now upstream at
+[Documentation/device-mapper/dm-integrity.rst], but the relevant ones are:
 
 - Sectors in the kernel (including in the dm-integrity settings) are *always* 512 bytes, even if you
   create the target with `integritysetup format --sectors-size 4096`. If you do that (you should!),
@@ -225,9 +213,8 @@ No. The code has no support for this notion. The metadata sector is always read.
 nice improvement.
 
 Ok, well, let's at least confirm that we're correctly ordering writes to the data+metadata so we end
-up with a linear stream of writes going to the drive. To do that I learned about
-[blktrace](https://git.kernel.org/pub/scm/linux/kernel/git/axboe/blktrace.git) which allows you to
-see the stream of IO going to the drive.
+up with a linear stream of writes going to the drive. To do that I learned about [blktrace] which
+allows you to see the stream of IO going to the drive.
 
 ```
 $ dd if=/dev/urandom of=/dev/mapper/test-integrity bs=8k count=1 seek=7G oflag=seek_bytes,direct,sync
@@ -256,11 +243,40 @@ seek in order to write the modified metadata. I guess this is an okay trade-off,
 reads over writes, especially considering that even a full 4 MiB block write will still perform the
 metadata read.
 
-## Conclusion
+## An Early Conclusion
 
-If you've come this far... I'm sorry. I'm not done with this setup. I'm currently overwriting all my
-drives through dm-integrity in order to force it to calculate checksums for all the data, after
-which I can start setting up the RAID array. More to come later.
+I sat on this blog post for two years because it isn't finished... but I lost interest. I wrote this
+blog post two years ago, and sat on it without publishing, waiting for me to finish the project.
+However I'm giving up and publishing this post as-is now because I think it's interesting on its
+own, albeit incomplete.
+
+Since then, I ran into some more issues after this point, and I don't even remember anymore what
+they were. Today, I've given up and switched to ZFS + [Snapraid] + [MergerFS], and am largely ok
+with the situation, although I haven't had a major drive loss event since the switch so it's hard to
+say it's ideal.
+
+[blktrace]: https://git.kernel.org/pub/scm/linux/kernel/git/axboe/blktrace.git
+[Device Mapper]: https://docs.kernel.org/admin-guide/device-mapper/index.html
+[dm-integrity-standalone-incomplete]: https://github.com/systemd/systemd/issues/7757#issuecomment-822867467
+[dm-integrity]: https://docs.kernel.org/admin-guide/device-mapper/dm-integrity.html
+[dm-raid]: https://docs.kernel.org/admin-guide/device-mapper/dm-raid.html
+[dmsetup(8)]: https://man7.org/linux/man-pages/man8/dmsetup.8.html
+[Documentation/device-mapper/dm-integrity.rst]: https://docs.kernel.org/admin-guide/device-mapper/dm-integrity.html
+[FEC]: https://en.wikipedia.org/wiki/Error_correction_code#Forward_error_correction
+[google-create-raid-array]: https://www.google.com/search?q=create+a+raid+array+linux
+[integritysetup(8)]: https://man7.org/linux/man-pages/man8/integritysetup.8.html
+[integritytab(5)]: https://man7.org/linux/man-pages/man5/integritytab.5.html
+[integritytab-journal-mode]: https://github.com/systemd/systemd/pull/27973
+[integritytab-no-journal]: https://github.com/systemd/systemd/pull/27824
+[lvmraid(7)]: https://man7.org/linux/man-pages/man7/lvmraid.7.html
+[man page]: https://en.wikipedia.org/wiki/Man_page
+[md(4)]: https://man7.org/linux/man-pages/man4/md.4.html
+[mdadm(8)]: https://man7.org/linux/man-pages/man8/mdadm.8.html
+[MergerFS]: https://github.com/trapexit/mergerfs
+[raid-setup-wikipedia]: https://raid.wiki.kernel.org/index.php/RAID_setup
+[Snapraid]: https://www.snapraid.it
+[systemd-integritysetup@.service(8)]: https://man7.org/linux/man-pages/man8/systemd-integritysetup@.service.8.html
+[win10-default-removal-policy]: https://learn.microsoft.com/en-us/windows/client-management/client-tools/change-default-removal-policy-external-storage-media
 
 {% comment %}
 vim: ft=liquid sw=4 ts=4 sts=4 tw=100 noet
