@@ -19,7 +19,7 @@ world.
 
 ## The RAID5 Write Hole
 
-Given what I just said above, it may surprise you to lose that Linux's software RAID can lose your
+Given what I just said above, it may surprise you to learn that Linux's software RAID can lose your
 data.
 
 It *probably* won't, in the same way that unplugging a FAT32 USB stick from your computer when
