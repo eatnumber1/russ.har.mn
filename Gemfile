@@ -44,3 +44,7 @@ gem "webrick", "~> 1.7"
 
 # http://jekyll.github.io/github-metadata/authentication/
 gem "netrc", "~> 0.11.0"
+
+# liquid has an undeclared dependency on bigdecimal at
+# liquid-4.0.4/lib/liquid/standardfilters.rb:2
+gem "bigdecimal"
